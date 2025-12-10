@@ -44,10 +44,13 @@
 }
 
 /* Estilos para la palabra o frase resaltada dentro del H1. */
-.highlight {
-    /* Fuerza el color azul primario, sobreescribiendo el degradado transparente. */
-    color: #2563eb; 
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
+
 /* Estilos para el párrafo de descripción. */
 .hero-content p { 
     /* Color de texto gris sutil. */

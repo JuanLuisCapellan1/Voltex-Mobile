@@ -67,6 +67,23 @@ header {
     border-bottom: 1px solid #1e293b;
 }
 
+.nav-wrapper {
+    /* Habilita Flexbox para alinear la navegación y el carrito horizontalmente */
+    display: flex;
+    /* Centra los ítems verticalmente */
+    align-items: center;
+    /* Controla el espacio entre la navegación (<nav>) y el carrito (.user-actions) */
+    gap: 3rem; /* Ajusta este valor (e.g., 2rem, 3rem) hasta que estés satisfecho con el espacio */
+}
+
+.highlight {
+    /* Fuerza el color azul primario, sobreescribiendo el degradado transparente. */
+    color: #2563eb; 
+}
+
+.user-actions { display: flex; gap: 1.5rem; }
+
+
 /* Estilos específicos para el logo. */
 .logo {
     /* Tamaño de fuente. */
@@ -370,5 +387,30 @@ footer {
         text-align: center;
         /* Espacio entre las columnas apiladas. */
         gap: 2.5rem;
+    }
+}
+
+/* Media query: aplica estilos cuando el ancho de la pantalla es de 460px o menos (Móviles pequeños). */
+@media (max-width: 460px) {
+    /* En el encabezado: */
+    header {
+        /* Reduce aún más el padding. */
+        padding: 0.8rem;
+
+        /* Reduce el espacio entre elementos. */
+        gap: 0.8rem;
+    }
+
+    .nav-wrapper {
+        /* Reduce el espacio entre la navegación y el carrito. */
+        gap: 2rem;
+    }
+
+    /* En la navegación: */
+    nav ul {
+        /* Reduce el espacio entre enlaces. */
+        gap: 1rem;
+        /* Reduce aún más el tamaño de fuente. */
+        font-size: 0.85rem;
     }
 }

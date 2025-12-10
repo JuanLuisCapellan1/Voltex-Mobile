@@ -19,22 +19,25 @@
 <body>
     <!-- INICIO DEL HEADER (Encabezado y Navegación) -->
     <header>
-        <!-- Contenedor del logotipo. -->
-        <div class="logo">VOLTEXMobile</div>
-        <!-- Barra de navegación principal. -->
-        <nav>
-            <!-- Lista de enlaces del menú. -->
-            <ul>
-                <!-- Enlace a la página de inicio. -->
-                <li><a href="../index.html">Inicio</a></li>
-                <!-- Enlace a la tienda. -->
-                <li><a href="tienda.html">Tienda</a></li>
-                <!-- Enlace a la página 'Nosotros', marcado como activo. -->
-                <li><a href="nosotros.html" class="active">Nosotros</a></li>
-                <!-- Enlace a la página de contacto. -->
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="logo">
+            <i class="fa-solid fa-mobile-screen-button" style="color: #2563eb;"></i>
+            VOLTEX<span class="highlight">Mobile</span>
+        </div>
+        
+        <div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-actions">
+                <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
     </header>
 
     <!-- INICIO DEL CONTENIDO PRINCIPAL DE LA PÁGINA -->
@@ -121,7 +124,10 @@
         <div class="footer-grid">
             <!-- Columna 1: Logo y descripción breve. -->
             <div class="footer-col">
-                <div class="logo">VOLTEXMobile</div>
+                <div class="logo">
+                    <i class="fa-solid fa-mobile-screen-button" style="color: #2563eb;"></i>
+                    VOLTEX<span class="highlight">Mobile</span>
+                </div>
                 <p>Tecnología que se adapta a tu ritmo.</p>
             </div>
             <!-- Columna 2: Enlaces Rápidos (rutas relativas a la carpeta 'pages'). -->

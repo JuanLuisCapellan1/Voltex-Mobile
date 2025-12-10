@@ -1,0 +1,221 @@
+/* css/cart.css */
+
+/* --- Carrito de Compras (Cart Page) --- */
+
+/* Título de la página del carrito */
+.page-title {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+/* Diseño de dos columnas para el carrito */
+.cart-layout {
+    display: flex;
+    gap: 3rem; /* Espacio entre la lista de ítems y el resumen */
+    margin-bottom: 5rem;
+}
+
+/* Columna Izquierda: Lista de Productos (Ocupa más espacio) */
+.cart-items-list {
+    flex-grow: 1.5; /* Hace que esta columna sea más grande */
+}
+
+/* Estilo para cada producto en el carrito */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    /* Color de fondo que se ve en la imagen (más claro que el fondo del body) */
+    background-color: #0f172a; 
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+}
+
+.item-details {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Estilo de la imagen del producto */
+.item-details img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Control de Cantidad */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #334155;
+    border-radius: 6px;
+    width: 90px;
+}
+
+.quantity-control button,
+.quantity-control span {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.quantity-control span {
+    border-left: 1px solid #334155;
+    border-right: 1px solid #334155;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Precio y Acciones (Botón de Borrar) */
+.item-price-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.item-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.delete-btn {
+    color: #94a3b8; /* Gris sutil para el icono de borrar */
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.delete-btn:hover {
+    color: #ef4444; /* Rojo al pasar el mouse */
+}
+
+
+/* --- Columna Derecha: Resumen del Pedido --- */
+
+/* Contenedor del Resumen */
+.order-summary {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    padding: 1.5rem;
+    background-color: #0f172a; /* Color de fondo del card */
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    height: fit-content; /* Para que la caja no sea más alta que la columna izquierda */
+    /* Color de fondo azul en la imagen */
+    background-color: #1e293b;
+    border-color: #1e293b;
+}
+
+.order-summary h2 {
+    font-size: 1.4rem;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+/* Líneas de detalle del resumen (Subtotal, Envío, Total) */
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.summary-line span:first-child {
+    color: #94a3b8; /* Etiquetas en gris */
+}
+
+/* Línea de envío */
+.shipping-line {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #334155;
+    margin-bottom: 1rem;
+}
+
+.shipping-free {
+    color: #10b981; /* Verde para "Gratis" */
+    font-weight: 600;
+}
+
+/* Línea total */
+.total-line {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.total-amount {
+    color: #ffffff;
+}
+
+/* Botón de Proceder al Pago (usando la clase .btn-primary existente) */
+.checkout-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Texto de pago seguro */
+.secure-payment {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+/* --- Responsive para el Carrito --- */
+@media (max-width: 992px) {
+    /* En pantallas medianas y pequeñas, las columnas del carrito se apilan */
+    .cart-layout {
+        flex-direction: column;
+    }
+
+    /* El resumen del pedido ya no necesita crecer, ocupa todo el ancho */
+    .cart-items-list,
+    .order-summary {
+        flex-grow: 1;
+        width: 100%; /* Asegura que ocupen el ancho completo */
+    }
+}
+
+@media (max-width: 576px) {
+    /* En móviles, simplificamos la tarjeta del ítem del carrito */
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-details {
+        margin-bottom: 1rem;
+    }
+
+    .item-price-actions {
+        width: 100%;
+        justify-content: space-between;
+        padding-top: 1rem;
+        border-top: 1px solid #1e293b;
+    }
+    
+    .item-price {
+        font-size: 1.1rem;
+    }
+}

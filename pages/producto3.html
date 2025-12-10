@@ -1,24 +1,15 @@
-<!-- Define que el documento utiliza la sintaxis HTML5. -->
 <!DOCTYPE html>
-<!-- Etiqueta raíz del documento, estableciendo el idioma en español. -->
 <html lang="es">
 <head>
-    <!-- Define la codificación de caracteres a UTF-8. -->
     <meta charset="UTF-8">
-    <!-- Configura el viewport para el diseño responsive. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Título de la página del producto. -->
-    <title>VOLTEX Mobile | iPhone 15</title>
-    <!-- Vincula la hoja de estilos CSS global (subiendo un nivel con ../). -->
+    <title>VOLTEX Mobile | Google Pixel 8 Pro</title>
     <link rel="stylesheet" href="../css/style.css">
-    <!-- Vincula la hoja de estilos CSS específica para el detalle del producto. -->
     <link rel="stylesheet" href="../css/producto.css">
-    <!-- Carga la librería de iconos Font Awesome. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     
-    <!-- INICIO DEL HEADER (Encabezado y Navegación) -->
     <header>
         <div class="logo">
             <i class="fa-solid fa-mobile-screen-button" style="color: #2563eb;"></i>
@@ -41,113 +32,81 @@
         </div>
     </header>
 
-    <!-- INICIO DEL CONTENIDO PRINCIPAL (Etiqueta semántica main) -->
     <main class="product-detail-wrapper">
         
-        <!-- Contenedor principal que usa Grid para dividir la página en dos columnas (imagen e info). -->
         <div class="product-detail-container">
             
-            <!-- COLUMNA IZQUIERDA: Galería de imágenes. -->
             <div class="product-images">
-                <!-- Contenedor de la imagen principal destacada. -->
                 <div class="main-image">
-                    <!-- Imagen principal del producto. -->
-                    <img src="../img/iphone-15-pro-max.webp" alt="iPhone 15 Titanium">
+                    <img src="../img/google-pixel-8-pro.png" alt="Google Pixel 8 Pro color Obsidian">
                 </div>
-                <!-- Cuadrícula para mostrar las miniaturas de imágenes del producto. -->
                 <div class="thumbnail-gallery">
-                    <!-- Miniatura 1, marcada como activa (seleccionada). -->
                     <div class="thumbnail active">
-                        <img src="../img/iphone-15-pro-max.webp" alt="Vista 1">
+                        <img src="../img/google-pixel-8-pro-2.png" alt="Vista trasera Pixel 8 Pro">
                     </div>
-                    <!-- Miniatura 2. -->
-                    <div class="thumbnail">
-                        <img src="../img/iphone-15-pro-max-2.webp" alt="Vista 2">
-                    </div>
-                    <!-- Miniatura 3. -->
-                    <div class="thumbnail">
-                        <img src="../img/iphone-15-pro-max-3.webp" alt="Vista 3">
+                    <div class="thumbnail active">
+                        <img src="../img/google-pixel-8-pro-3.png" alt="Vista trasera Pixel 8 Pro">
                     </div>
                 </div>
             </div>
 
-            <!-- COLUMNA DERECHA: Detalles e información del producto. -->
             <div class="product-info">
-                <!-- Título principal del producto (H1 semántico). -->
-                <h1 class="product-title">iPhone 15</h1>
-                <!-- Contenedor para la valoración y número de opiniones. -->
+                <h1 class="product-title">Google Pixel 8 Pro</h1>
                 <div class="product-rating">
-                    <!-- Iconos de estrellas para simular la valoración. -->
                     <div class="stars">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
                     </div>
-                    <!-- Contador de opiniones. -->
-                    <span class="review-count">(124 opiniones)</span>
+                    <span class="review-count">(150 opiniones)</span>
                 </div>
-                <!-- Precio de venta del producto. -->
-                <div class="product-price">$1199</div>
-                <!-- Párrafo de descripción corta del producto. -->
+                <div class="product-price">$999</div>
                 <p class="product-description">
-                    Gran potencia, cámara increíble y diseño duradero. El nuevo iPhone 15 está diseñado para resistir tu día a día con materiales de grado aeroespacial.
+                    El móvil más inteligente de Google, impulsado por Google AI. Cámara profesional con edición mágica, chip Tensor G3 y la mejor experiencia Android pura.
                 </p>
 
-                <!-- Caja de Especificaciones Técnicas (Destacada). -->
                 <div class="specs-box">
-                    <h3>Especificaciones Técnicas</h3>
-                    <!-- Cuadrícula interna para mostrar pares de etiqueta-valor. -->
+                    <h3>Especificaciones Clave</h3>
                     <div class="specs-grid">
-                        <!-- Item de especificación 1: Cámara. -->
                         <div class="spec-item">
-                            <span class="spec-label">Cámara</span>
-                            <span class="spec-value">48MP Main</span>
+                            <span class="spec-label">Cámara Principal</span>
+                            <span class="spec-value">50MP + Telefoto 5x</span>
                         </div>
-                        <!-- Item de especificación 2: Pantalla. -->
                         <div class="spec-item">
                             <span class="spec-label">Pantalla</span>
-                            <span class="spec-value">6.1 inch Super Retina XDR</span>
+                            <span class="spec-value">6.7" Super Actua Display</span>
                         </div>
-                        <!-- Item de especificación 3: Almacenamiento. -->
                         <div class="spec-item">
-                            <span class="spec-label">Almacenamiento</span>
+                            <span class="spec-label">Almacenamiento Base</span>
                             <span class="spec-value">128GB</span>
                         </div>
-                        <!-- Item de especificación 4: Procesador. -->
                         <div class="spec-item">
                             <span class="spec-label">Procesador</span>
-                            <span class="spec-value">A16 Bionic</span>
+                            <span class="spec-value">Google Tensor G3</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Botones de Acción (Añadir a carrito / Comprar). -->
                 <div class="product-actions">
-                    <!-- Botón Primario: Añadir al Carrito. -->
                     <button class="btn btn-primary btn-lg">
                         <a href="carrito.html"><i class="fa-solid fa-cart-plus"></i> Añadir al Carrito</a>
                     </button>
-                    <!-- Botón Secundario: Comprar Ahora. -->
                     <button class="btn btn-outline btn-lg">
                         Comprar Ahora
                     </button>
                 </div>
 
-                <!-- Información Adicional (Envío, Garantía, Stock). -->
                 <div class="additional-info">
-                    <!-- Item de información: Envío. -->
                     <div class="info-item">
                         <i class="fa-solid fa-truck"></i>
                         <span>Envío gratis en 24h</span>
                     </div>
-                    <!-- Item de información: Garantía. -->
                     <div class="info-item">
                         <i class="fa-solid fa-shield"></i>
                         <span>Garantía de 2 años</span>
                     </div>
-                    <!-- Item de información: Stock. -->
                     <div class="info-item">
                         <i class="fa-solid fa-check"></i>
                         <span>Stock disponible</span>
@@ -159,11 +118,8 @@
         </div>
     </main>
     
-    <!-- INICIO DEL FOOTER (Pie de página) -->
     <footer>
-        <!-- Cuadrícula para organizar las columnas de información del footer. -->
         <div class="footer-grid">
-            <!-- Columna 1: Logo y descripción breve. -->
             <div class="footer-col">
                 <div class="logo">
                     <i class="fa-solid fa-mobile-screen-button" style="color: #2563eb;"></i>
@@ -171,17 +127,14 @@
                 </div>
                 <p>Tecnología que se adapta a tu ritmo.</p>
             </div>
-            <!-- Columna 2: Enlaces Rápidos. -->
             <div class="footer-col">
                 <h4>Enlaces Rápidos</h4>
-                <!-- Los enlaces son relativos a la carpeta 'pages'. -->
                 <ul>
                     <li><a href="tienda.html">Tienda</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
-            <!-- Columna 3: Categorías de productos. -->
             <div class="footer-col">
                 <h4>Categorías</h4>
                 <ul>
@@ -190,14 +143,12 @@
                     <li>Accesorios</li>
                 </ul>
             </div>
-            <!-- Columna 4: Información de Contacto. -->
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <p><i class="fa-solid fa-location-dot"></i> Av. Tecnología 123</p>
                 <p><i class="fa-solid fa-envelope"></i> contacto@voltex.com</p>
             </div>
         </div>
-        <!-- Sección de derechos de autor. -->
         <div class="footer-bottom">
             <p>&copy; 2025 VOLTEX Mobile. Todos los derechos reservados.</p>
         </div>

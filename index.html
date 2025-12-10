@@ -19,24 +19,25 @@
 <body>
     <!-- Inicio del encabezado de la página (Etiqueta semántica HTML5). -->
     <header>
-        <!-- Contenedor del logotipo de la marca. -->
         <div class="logo">
-            VOLTEXMobile
+            <i class="fa-solid fa-mobile-screen-button" style="color: #2563eb;"></i>
+            VOLTEX<span class="highlight">Mobile</span>
         </div>
-        <!-- Contenedor de la navegación principal (Etiqueta semántica HTML5). -->
-        <nav>
-            <!-- Lista desordenada para los elementos del menú de navegación. -->
-            <ul>
-                <!-- Enlace a la página de inicio, marcado con la clase 'active' para resaltarlo. -->
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <!-- Enlace a la página de la tienda (ruta relativa a la carpeta pages). -->
-                <li><a href="pages/tienda.html">Tienda</a></li>
-                <!-- Enlace a la página 'Nosotros'. -->
-                <li><a href="pages/nosotros.html">Nosotros</a></li>
-                <!-- Enlace a la página de contacto. -->
-                <li><a href="pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+        
+        <div class="nav-wrapper">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="pages/tienda.html">Tienda</a></li>
+                    <li><a href="pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="user-actions">
+                <a href="pages/carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
     </header>
 
     <!-- Inicio del contenido principal de la página (Etiqueta semántica HTML5). -->
@@ -56,7 +57,7 @@
                     <!-- Botón primario de acción (Enlace a la tienda). -->
                     <a href="pages/tienda.html" class="btn btn-primary">Comprar Ahora <i class="fa-solid fa-arrow-right"></i></a>
                     <!-- Botón secundario o de contorno (Saber Más). -->
-                    <button class="btn btn-outline">Saber Más</button>
+                    <a href="pages/contacto.html" class="btn btn-outline">Saber Más</a>
                 </div>
             </div>
             <!-- Contenedor de la imagen visual del Hero. -->
@@ -208,7 +209,10 @@
         <div class="footer-grid">
             <!-- Columna 1: Logo y descripción breve. -->
             <div class="footer-col">
-                <div class="logo">VOLTEXMobile</div>
+                <div class="logo">
+                    <i class="fa-solid fa-mobile-screen-button" style="color: #2563eb;"></i>
+                    VOLTEX<span class="highlight">Mobile</span>
+                </div>
                 <p>Tecnología que se adapta a tu ritmo.</p>
             </div>
             <!-- Columna 2: Enlaces Rápidos. -->
