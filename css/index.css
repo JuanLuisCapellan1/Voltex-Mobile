@@ -1,0 +1,386 @@
+/* css/index.css */
+
+/* --- Hero Section --- */
+/* Estilos del contenedor principal del Hero (la primera sección de la página). */
+.hero {
+    /* Usa Flexbox para alinear el contenido y la imagen uno al lado del otro. */
+    display: flex;
+    /* Centra los elementos verticalmente. */
+    align-items: center;
+    /* Distribuye el espacio entre el contenido y la imagen. */
+    justify-content: space-between;
+    /* Espaciado interno superior e inferior de 4rem y 5% a los lados. */
+    padding: 4rem 5%;
+    /* Altura mínima del 85% de la altura de la ventana (para que ocupe casi toda la pantalla inicial). */
+    min-height: 85vh; 
+    /* Espacio entre los elementos de contenido e imagen. */
+    gap: 2rem;
+}
+
+/* Contenedor del texto, título y botones del Hero. */
+.hero-content { 
+    /* Ocupa 1 unidad de espacio Flex (mitad del ancho en escritorio). */
+    flex: 1; 
+    /* Pequeño espacio a la derecha para separarse de la imagen. */
+    padding-right: 1rem; 
+}
+
+/* Estilos para el título H1 dentro del Hero. */
+.hero-content h1 {
+    /* Tamaño de fuente grande. */
+    font-size: 3.5rem;
+    /* Altura de línea compacta. */
+    line-height: 1.1;
+    /* Margen inferior para separar del párrafo. */
+    margin-bottom: 1.5rem;
+    /* Crea un degradado de blanco a gris para el texto. */
+    background: linear-gradient(to right, #fff, #94a3b8);
+    /* Propiedad experimental para aplicar el degradado solo al texto (compatibilidad con navegadores Webkit). */
+    -webkit-background-clip: text; 
+    /* Aplica el degradado solo al texto (estándar). */
+    background-clip: text;
+    /* Hace el color del texto transparente para que se vea el degradado. */
+    color: transparent;
+}
+
+/* Estilos para la palabra o frase resaltada dentro del H1. */
+.highlight {
+    /* Fuerza el color azul primario, sobreescribiendo el degradado transparente. */
+    color: #2563eb; 
+}
+/* Estilos para el párrafo de descripción. */
+.hero-content p { 
+    /* Color de texto gris sutil. */
+    color: #94a3b8; 
+    /* Margen inferior. */
+    margin-bottom: 2rem; 
+    /* Tamaño de fuente ligeramente grande. */
+    font-size: 1.15rem; 
+    /* Limita el ancho del párrafo para mejor legibilidad. */
+    max-width: 500px; 
+}
+/* Contenedor para los botones del Hero. */
+.hero-buttons { 
+    /* Usa Flexbox para alinearlos horizontalmente. */
+    display: flex; 
+    /* Espacio entre los botones. */
+    gap: 1rem; 
+    /* Permite que los botones se envuelvan si no caben (responsive). */
+    flex-wrap: wrap; 
+}
+/* Contenedor de la imagen del Hero. */
+.hero-image { 
+    /* Ocupa 1 unidad de espacio Flex (mitad del ancho en escritorio). */
+    flex: 1; 
+    /* Usa Flexbox para centrar la imagen dentro de su contenedor. */
+    display: flex; 
+    /* Centra la imagen horizontalmente. */
+    justify-content: center; 
+}
+/* Estilos para la etiqueta de imagen. */
+.hero-image img { 
+    /* Aplica bordes redondeados. */
+    border-radius: 20px; 
+    /* Añade una sombra de profundidad. */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); 
+    /* Asegura que no exceda el ancho del contenedor. */
+    max-width: 100%;
+    /* Limita la altura máxima de la imagen para evitar que sea demasiado grande. */
+    max-height: 550px;
+    /* Permite que la altura se ajuste automáticamente manteniendo la proporción. */
+    height: auto;
+}
+
+/* --- Features Section (Fondo oscuro alternativo) --- */
+/* Sección de categorías o características. */
+.feature-section {
+    /* Color de fondo alternativo (más oscuro que el body, como una tarjeta grande). */
+    background-color: #0f172a;
+    /* Espaciado interno. */
+    padding: 4rem 5%;
+    /* Margen inferior para separarla de la siguiente sección. */
+    margin-bottom: 4rem;
+}
+
+/* Contenedor de los títulos de la sección de características. */
+.title-features-section { 
+    /* Centra el texto. */
+    text-align: center; 
+    /* Margen inferior. */
+    margin-bottom: 3rem; 
+}
+/* Título H3 de la sección. */
+.title-features-section h3 { 
+    /* Tamaño de fuente. */
+    font-size: 2rem; 
+    /* Margen inferior. */
+    margin-bottom: 0.5rem; 
+}
+/* Párrafo descriptivo de la sección. */
+.title-features-section p { 
+    /* Color de texto gris sutil. */
+    color: #94a3b8; 
+}
+
+/* Cuadrícula para las 3 tarjetas de características. */
+.features-grid {
+    /* Usa Grid. */
+    display: grid;
+    /* Columnas adaptables: mínimo 250px, máximo 1fr (iguales). */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Espacio entre las tarjetas. */
+    gap: 2rem;
+}
+
+/* Tarjeta individual de característica. */
+.feature-card { 
+    /* Centra el contenido de la tarjeta. */
+    text-align: center; 
+    /* Espaciado interno. */
+    padding: 1rem; 
+}
+/* Icono dentro de la tarjeta. */
+.feature-icon { 
+    /* Tamaño del icono. */
+    font-size: 2.5rem; 
+    /* Color azul primario. */
+    color: #2563eb; 
+    /* Margen inferior. */
+    margin-bottom: 1rem; 
+}
+/* Título de la tarjeta. */
+.feature-card h3 { 
+    /* Margen inferior. */
+    margin-bottom: 0.5rem; 
+    /* Tamaño de fuente. */
+    font-size: 1.2rem; 
+}
+/* Párrafo de la tarjeta. */
+.feature-card p { 
+    /* Color gris sutil. */
+    color: #94a3b8; 
+    /* Tamaño de fuente. */
+    font-size: 0.95rem; 
+}
+
+/* --- Section Header (Productos Destacados) --- */
+/* Sección de productos destacados. */
+.products-section { 
+    /* Márgenes superior e inferior. */
+    margin-top: 4rem; 
+    margin-bottom: 4rem; 
+}
+
+/* Estilo para el encabezado de la sección (Título a la izquierda, enlace "Ver todo" a la derecha). */
+.section-header {
+    /* Usa Flexbox. */
+    display: flex;
+    /* Distribuye el espacio entre los grupos de elementos. */
+    justify-content: space-between;
+    /* Alinea los ítems al final (parte inferior) para que el enlace esté alineado con el subtítulo. */
+    align-items: flex-end;
+    /* Margen inferior. */
+    margin-bottom: 2.5rem;
+    /* Permite que los elementos se envuelvan si no caben (responsive). */
+    flex-wrap: wrap;
+    /* Espacio entre el título y el enlace. */
+    gap: 1.5rem;
+}
+
+/* Título H2 de la sección. */
+.section-header h2 { 
+    /* Tamaño de fuente. */
+    font-size: 2.2rem; 
+    /* Altura de línea. */
+    line-height: 1.2; 
+    /* Margen inferior. */
+    margin-bottom: 0.5rem; 
+}
+/* Párrafo descriptivo de la sección. */
+.section-header p { 
+    /* Color gris sutil. */
+    color: #94a3b8; 
+    /* Tamaño de fuente. */
+    font-size: 1.1rem; 
+}
+
+/* Enlace "Ver todo". */
+.view-all {
+    /* Color azul primario. */
+    color: #2563eb;
+    /* Grosor de fuente. */
+    font-weight: 600;
+    /* Tamaño de fuente. */
+    font-size: 1rem;
+    /* Usa Flexbox para alinear el texto y el icono de flecha. */
+    display: flex;
+    /* Centra los ítems. */
+    align-items: center;
+    /* Espacio entre el texto y el icono. */
+    gap: 8px;
+}
+
+/* --- Benefits Section (Círculos) --- */
+/* Sección de beneficios inferiores (Envío, Garantía, etc.). */
+.benefits-section {
+    /* Espaciado interno. */
+    padding: 5rem 5%;
+    /* Usa Grid para la disposición. */
+    display: grid;
+    /* Columnas adaptables: mínimo 220px, máximo 1fr. */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* Espacio entre las tarjetas. */
+    gap: 3rem;
+    /* Centra el texto. */
+    text-align: center;
+    /* Línea divisoria superior. */
+    border-top: 1px solid #1e293b; 
+    /* Fondo oscuro de tarjeta. */
+    background-color: #0f172a;
+}
+
+/* Tarjeta individual de beneficio. */
+.benefit-card {
+    /* Usa Flexbox para apilar el icono, título y texto. */
+    display: flex;
+    /* Apila los elementos verticalmente. */
+    flex-direction: column;
+    /* Centra los elementos horizontalmente. */
+    align-items: center;
+    /* Limita el ancho máximo para evitar que el texto se estire demasiado. */
+    max-width: 300px;
+    /* Centra la tarjeta en su celda Grid. */
+    margin: 0 auto; 
+}
+
+/* Estilos del círculo que envuelve el icono. */
+.icon-circle {
+    /* Ancho y alto fijos para el círculo. */
+    width: 80px; height: 80px;
+    /* Fondo de tarjeta (mismo que el contenedor). */
+    background-color: #0f172a;
+    /* Bordes redondeados al 50% para formar un círculo. */
+    border-radius: 50%;
+    /* Usa Flexbox para centrar el icono. */
+    display: flex;
+    /* Centra el icono vertical y horizontalmente. */
+    align-items: center;
+    justify-content: center;
+    /* Tamaño del icono. */
+    font-size: 1.8rem;
+    /* Color azul primario para el icono. */
+    color: #2563eb;
+    /* Margen inferior. */
+    margin-bottom: 1.5rem;
+    /* Transiciones suaves para los efectos hover. */
+    transition: transform 0.3s ease, background-color 0.3s;
+    /* Borde sutil de 1px. */
+    box-shadow: 0 0 0 1px #1e293b; 
+}
+
+/* Efecto hover en el círculo al pasar el mouse sobre la tarjeta. */
+.benefit-card:hover .icon-circle {
+    /* Aumenta el tamaño del círculo. */
+    transform: scale(1.1);
+    /* Cambia el color de fondo sutilmente. */
+    background-color: #1e293b;
+    /* Cambia el color del icono (azul oscuro). */
+    color: #1d4ed8;
+}
+
+/* Título H3 del beneficio. */
+.benefit-card h3 { 
+    /* Tamaño de fuente. */
+    font-size: 1.25rem; 
+    /* Margen inferior. */
+    margin-bottom: 0.5rem; 
+    /* Grosor de fuente. */
+    font-weight: 700; 
+}
+/* Párrafo del beneficio. */
+.benefit-card p { 
+    /* Color gris sutil. */
+    color: #94a3b8; 
+}
+
+/* --- RESPONSIVE ESPECÍFICO DE INDEX --- */
+
+/* Media query para pantallas de tablet y anchos intermedios (900px y menos). */
+@media (max-width: 900px) {
+    /* En el Hero: */
+    .hero {
+        /* Cambia la dirección de Flexbox a columna, invirtiendo el orden (imagen abajo, texto arriba). */
+        flex-direction: column-reverse; 
+        /* Centra el texto en la pantalla. */
+        text-align: center;
+        /* Reduce el padding superior. */
+        padding-top: 2rem;
+    }
+    
+    /* Contenido del Hero: */
+    .hero-content { 
+        /* Elimina el padding a la derecha que tenía en escritorio. */
+        padding-right: 0; 
+    }
+    /* Título H1: */
+    .hero-content h1 { 
+        /* Reduce el tamaño de fuente para tablet. */
+        font-size: 2.8rem; 
+    }
+    /* Párrafo: */
+    .hero-content p { 
+        /* Centra el párrafo automáticamente. */
+        margin: 0 auto 2rem auto; 
+    }
+    /* Botones: */
+    .hero-buttons { 
+        /* Centra los botones. */
+        justify-content: center; 
+    }
+    /* Imagen: */
+    .hero-image { 
+        /* Centra la imagen. */
+        justify-content: center; 
+        /* Ocupa todo el ancho disponible. */
+        width: 100%; 
+    }
+}
+
+/* Media query para pantallas de móvil (600px y menos). */
+@media (max-width: 600px) {
+    /* Ajustes para móviles pequeños */
+    /* Hero: */
+    .hero { 
+        /* Reduce aún más el padding. */
+        padding: 2rem 1.5rem; 
+    }
+    /* Título H1: */
+    .hero-content h1 { 
+        /* Reduce el tamaño de fuente para móvil. */
+        font-size: 2.2rem; 
+    }
+    
+    /* Cabecera de la sección de productos: */
+    .section-header { 
+        /* Apila el título/subtítulo y el enlace "Ver todo" verticalmente. */
+        flex-direction: column; 
+        /* Alinea el contenido a la izquierda. */
+        align-items: flex-start;
+        /* Espacio entre los elementos apilados. */
+        gap: 1rem;
+    }
+    
+    /* Cuadrícula de productos: */
+    .product-grid {
+        /* Fuerza una sola columna para que las tarjetas ocupen todo el ancho. */
+        grid-template-columns: 1fr; 
+    }
+    
+    /* Sección de beneficios: */
+    .benefits-section {
+        /* Fuerza una sola columna para que las tarjetas se apilen. */
+        grid-template-columns: 1fr;
+        /* Reduce el padding. */
+        padding: 3rem 1.5rem;
+    }
+}

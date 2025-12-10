@@ -1,0 +1,374 @@
+/* css/style.css */
+
+/* Selector universal: aplica a todos los elementos. */
+* { 
+    /* Elimina el margen por defecto del navegador. */
+    margin: 0; 
+    /* Elimina el padding por defecto del navegador. */
+    padding: 0; 
+    /* Asegura que el padding y el border no incrementen el ancho/alto del elemento (modelo de caja). */
+    box-sizing: border-box; 
+}
+
+/* Estilos aplicados al cuerpo del documento. */
+body {
+    /* Color de fondo principal oscuro. */
+    background-color: #050b14;
+    /* Color de texto base blanco. */
+    color: #ffffff;
+    /* Fuente principal con fallbacks de sistema. */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Altura de línea para mejor legibilidad. */
+    line-height: 1.6;
+}
+
+/* Estilos base para enlaces. */
+a { 
+    /* Elimina el subrayado por defecto. */
+    text-decoration: none; 
+    /* Hereda el color del texto del padre. */
+    color: inherit; 
+    /* Aplica una transición suave a las propiedades que cambien (ej. al hacer hover). */
+    transition: 0.3s; 
+}
+/* Estilos para listas desordenadas. */
+ul { 
+    /* Elimina los puntos o viñetas de la lista. */
+    list-style: none; 
+}
+/* Estilos para imágenes. */
+img { 
+    /* Asegura que las imágenes nunca excedan el ancho de su contenedor. */
+    max-width: 100%; 
+    /* Trata la imagen como un bloque para eliminar el espacio extra debajo. */
+    display: block; 
+}
+
+/* --- Header y Navegación --- */
+/* Estilos del encabezado. */
+header {
+    /* Usa Flexbox para alinear elementos (logo y nav) en una fila. */
+    display: flex;
+    /* Distribuye el espacio entre el logo y la navegación. */
+    justify-content: space-between;
+    /* Centra los ítems verticalmente. */
+    align-items: center;
+    /* Espaciado interno superior/inferior y a los lados (5% de ancho del viewport). */
+    padding: 1.5rem 5%;
+    /* Color de fondo, el mismo que el body. */
+    background-color: #050b14;
+    /* Hace que el header se quede fijo en la parte superior al hacer scroll. */
+    position: sticky;
+    /* Fija la posición en la parte superior. */
+    top: 0;
+    /* Asegura que el header esté por encima de otros elementos al hacer scroll. */
+    z-index: 1000;
+    /* Línea divisoria sutil en la parte inferior. */
+    border-bottom: 1px solid #1e293b;
+}
+
+/* Estilos específicos para el logo. */
+.logo {
+    /* Tamaño de fuente. */
+    font-size: 1.5rem;
+    /* Grosor de la fuente. */
+    font-weight: bold;
+    /* Color de fuente blanco. */
+    color: #ffffff;
+}
+
+/* Estilos para la lista de navegación dentro del nav. */
+nav ul { 
+    /* Usa Flexbox para alinear los enlaces en una fila. */
+    display: flex; 
+    /* Espacio entre cada enlace. */
+    gap: 2rem; 
+}
+/* Estilos al pasar el mouse o cuando un enlace está activo. */
+nav a:hover, nav a.active { 
+    /* Cambia el color a azul primario. */
+    color: #2563eb; 
+}
+
+/* --- Componentes Globales --- */
+/* Contenedor de ancho limitado para centrar el contenido principal. */
+.container { 
+    /* Ancho máximo para el contenido. */
+    max-width: 1200px; 
+    /* Centra el contenedor horizontalmente (margin-left/right: auto). */
+    margin: 0 auto; 
+    /* Espacio interno a los lados (elimina el padding superior/inferior). */
+    padding: 0 2rem; 
+}
+
+/* Estilos base para todos los botones. */
+.btn {
+    /* Usa inline-flex para permitir alinear contenido (como iconos) y mantenerlo en línea. */
+    display: inline-flex;
+    /* Centra los ítems verticalmente y añade espacio. */
+    align-items: center;
+    /* Espacio entre el texto y el icono. */
+    gap: 0.5rem;
+    /* Espaciado interno del botón. */
+    padding: 0.8rem 1.5rem;
+    /* Bordes muy redondeados (forma de píldora). */
+    border-radius: 50px;
+    /* Grosor de fuente semi-negrita. */
+    font-weight: 600;
+    /* Muestra un puntero al pasar el mouse. */
+    cursor: pointer;
+    /* Elimina el borde por defecto. */
+    border: none;
+    /* Transición suave para transformaciones y sombras. */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Tamaño de fuente estándar. */
+    font-size: 1rem;
+}
+
+/* Estilos para el botón primario (azul sólido). */
+.btn-primary { 
+    /* Fondo azul principal. */
+    background-color: #2563eb; 
+    /* Texto blanco. */
+    color: white; 
+}
+/* Estilos para el botón de contorno (transparente). */
+.btn-outline { 
+    /* Fondo transparente. */
+    background-color: transparent; 
+    /* Borde gris. */
+    border: 1px solid #334155; 
+    /* Texto blanco. */
+    color: white; 
+}
+/* Efecto al pasar el mouse sobre cualquier botón. */
+.btn:hover { 
+    /* Desplaza el botón ligeramente hacia arriba para dar un efecto "flotante". */
+    transform: translateY(-2px); 
+    /* Añade una sombra suave azul. */
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); 
+}
+
+/* Efectos hover para enlaces de ver detalles/ver todo. */
+.view-all:hover, .btn-view-details:hover { 
+    /* Color de texto blanco (aunque puede ser inherit). */
+    color: white; 
+    /* Escala ligeramente el enlace. */
+    transform: scale(1.1);
+}
+
+/* --- Tarjetas de Producto (Shared) --- */
+/* Estilos para la cuadrícula de productos. */
+.product-grid {
+    /* Usa Grid para el layout. */
+    display: grid;
+    /* Columnas adaptables: mínimo 260px, máximo 1fr (iguales). */
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    /* Espacio entre las tarjetas. */
+    gap: 2rem;
+}
+
+/* Estilos para una tarjeta de producto individual. */
+.product-card {
+    /* Fondo oscuro de tarjeta. */
+    background-color: #0f172a;
+    /* Bordes redondeados. */
+    border-radius: 16px;
+    /* Oculta el contenido que se desborde (útil para la imagen). */
+    overflow: hidden;
+    /* Borde sutil. */
+    border: 1px solid #1e293b;
+    /* Permite posicionamiento absoluto de elementos hijos (como el badge). */
+    position: relative;
+    /* Transición para el efecto hover. */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta. */
+.product-card:hover { 
+    /* Desplaza la tarjeta ligeramente hacia arriba. */
+    transform: translateY(-5px); 
+    /* Cambia el color del borde a azul primario. */
+    border-color: #2563eb; 
+}
+
+/* Estilos para la etiqueta o "badge" (ej. DESTACADO). */
+.badge {
+    /* Posicionamiento absoluto relativo al contenedor de la tarjeta. */
+    position: absolute;
+    /* 10px desde arriba y 10px desde la izquierda. */
+    top: 10px; left: 10px;
+    /* Fondo azul principal. */
+    background: #2563eb;
+    /* Texto blanco. */
+    color: white;
+    /* Espaciado interno. */
+    padding: 4px 10px;
+    /* Bordes redondeados. */
+    border-radius: 12px;
+    /* Tamaño de fuente pequeño. */
+    font-size: 0.75rem;
+    /* Grosor de fuente. */
+    font-weight: bold;
+    /* Asegura que el badge esté sobre la imagen. */
+    z-index: 2;
+}
+
+/* Contenedor de la imagen dentro de la tarjeta. */
+.card-image { 
+    /* Altura fija para la imagen. */
+    height: 250px; 
+    /* Fondo temporal gris. */
+    background: #ddd; 
+    /* Oculta lo que se desborde. */
+    overflow: hidden; 
+}
+/* Estilos de la imagen dentro del contenedor. */
+.card-image img { 
+    /* Ocupa todo el ancho. */
+    width: 100%; 
+    /* Ocupa todo el alto. */
+    height: 100%; 
+    /* Escala la imagen para cubrir el contenedor sin deformarse, recortando si es necesario. */
+    object-fit: cover; 
+}
+
+/* Contenedor de la información textual de la tarjeta. */
+.card-info { 
+    /* Espaciado interno. */
+    padding: 1.5rem; 
+}
+/* Título del producto. */
+.card-info h3 { 
+    /* Tamaño de fuente. */
+    font-size: 1.1rem; 
+    /* Margen inferior. */
+    margin-bottom: 0.5rem; 
+}
+/* Párrafo de descripción corta. */
+.card-info p { 
+    /* Color gris sutil. */
+    color: #94a3b8; 
+    /* Tamaño de fuente pequeño. */
+    font-size: 0.9rem; 
+}
+/* Etiqueta de precio. */
+.price { 
+    /* Tamaño de fuente grande. */
+    font-size: 1.4rem; 
+    /* Color azul principal. */
+    color: #2563eb; 
+    /* Grosor de fuente. */
+    font-weight: bold; 
+    /* Asegura que el precio ocupe su propia línea. */
+    display: block; 
+    /* Margen superior e inferior. */
+    margin: 1rem 0; 
+}
+/* Enlaces de "Ver Detalles". */
+.btn-link { 
+    /* Color azul principal. */
+    color: #2563eb; 
+    /* Grosor de fuente. */
+    font-weight: bold; 
+    /* Tamaño de fuente. */
+    font-size: 0.9rem; 
+}
+
+/* --- Footer --- */
+/* Estilos del pie de página. */
+footer {
+    /* Fondo muy oscuro (más que el body). */
+    background-color: #020617;
+    /* Espaciado interno (arriba, abajo y 5% a los lados). */
+    padding: 4rem 5% 2rem;
+    /* Línea divisoria en la parte superior. */
+    border-top: 1px solid #1e293b;
+}
+
+/* Cuadrícula para organizar las 4 columnas del footer. */
+.footer-grid {
+    /* Usa Grid. */
+    display: grid;
+    /* Define 4 columnas: la primera 1.5 veces más ancha que las otras tres (1fr, 1fr, 1fr). */
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    /* Espacio entre las columnas. */
+    gap: 2rem;
+    /* Margen inferior para separar del texto de derechos de autor. */
+    margin-bottom: 3rem;
+}
+
+/* Estilos de los títulos de columna. */
+.footer-col h4 { 
+    /* Margen inferior. */
+    margin-bottom: 1.2rem; 
+    /* Color blanco. */
+    color: white; 
+}
+/* Margen inferior para cada ítem de lista. */
+.footer-col ul li { 
+    margin-bottom: 0.8rem; 
+}
+/* Color de los enlaces en el footer. */
+.footer-col ul li a { 
+    color: #94a3b8; 
+}
+/* Efecto hover en los enlaces del footer. */
+.footer-col ul li a:hover { 
+    color: #2563eb; 
+}
+/* Color de los párrafos en el footer. */
+.footer-col p { 
+    color: #94a3b8; 
+    margin-bottom: 0.5rem; 
+}
+
+/* Sección de derechos de autor. */
+.footer-bottom { 
+    /* Centra el texto. */
+    text-align: center; 
+    /* Espaciado superior. */
+    padding-top: 2rem; 
+    /* Línea divisoria superior. */
+    border-top: 1px solid #1e293b; 
+    /* Color de texto gris. */
+    color: #94a3b8; 
+    /* Tamaño de fuente pequeño. */
+    font-size: 0.9rem; 
+}
+
+/* --- Responsive Global (Mobile Menu & Footer) --- */
+/* Media query: aplica estilos cuando el ancho de la pantalla es de 768px o menos (Tablets/Móviles). */
+@media (max-width: 768px) {
+    /* En el encabezado: */
+    header {
+        /* Cambia la dirección de Flexbox a columna (elementos apilados). */
+        flex-direction: column;
+        /* Espacio entre los elementos apilados. */
+        gap: 1rem;
+        /* Reduce el padding. */
+        padding: 1rem;
+    }
+
+    /* En la navegación: */
+    nav ul {
+        /* Espacio entre enlaces. */
+        gap: 1.5rem;
+        /* Reduce el tamaño de fuente. */
+        font-size: 0.9rem;
+        /* Permite que los enlaces pasen a la siguiente línea si no caben. */
+        flex-wrap: wrap;
+        /* Centra los enlaces horizontalmente. */
+        justify-content: center;
+    }
+
+    /* En la cuadrícula del footer: */
+    .footer-grid {
+        /* Cambia a una sola columna para adaptarse a móviles. */
+        grid-template-columns: 1fr; 
+        /* Centra el texto de cada columna. */
+        text-align: center;
+        /* Espacio entre las columnas apiladas. */
+        gap: 2.5rem;
+    }
+}

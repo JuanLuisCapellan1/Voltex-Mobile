@@ -1,0 +1,361 @@
+/* css/producto.css */
+
+/* --- Wrapper Principal --- */
+/* Contenedor principal que centra y limita el ancho del contenido de la página de detalle. */
+.product-detail-wrapper {
+    /* Espaciado interno (4rem arriba/abajo, 5% a los lados). */
+    padding: 4rem 5%;
+    /* Ancho máximo de 1200px. */
+    max-width: 1200px;
+    /* Centra el contenedor horizontalmente. */
+    margin: 0 auto;
+}
+
+/* --- Layout de Grid (Escritorio) --- */
+/* Contenedor que establece la división principal de la página: Izquierda (Imágenes) | Derecha (Info). */
+.product-detail-container {
+    /* Usa CSS Grid. */
+    display: grid;
+    /* Define dos columnas iguales para escritorio (1fr 1fr). */
+    grid-template-columns: 1fr 1fr;
+    /* Espacio entre las dos columnas. */
+    gap: 2rem;
+    /* Alinea el contenido de las celdas al inicio verticalmente. */
+    align-items: start;
+}
+
+/* --- Columna Izquierda: Imágenes --- */
+/* Contenedor de la galería de imágenes (imagen principal + miniaturas). */
+.product-images {
+    /* Usa Flexbox para apilar la imagen principal y la galería verticalmente. */
+    display: flex;
+    /* Dirección de apilamiento vertical. */
+    flex-direction: column;
+    /* Espacio entre la imagen principal y la galería de miniaturas. */
+    gap: 1.5rem;
+}
+
+/* Contenedor de la imagen principal. */
+.main-image {
+    /* Color de fondo oscuro (como las tarjetas). */
+    background-color: #0f172a; 
+    /* Bordes redondeados. */
+    border-radius: 20px;
+    /* Borde sutil. */
+    border: 1px solid #1e293b;
+    /* Oculta lo que se desborde. */
+    overflow: hidden;
+    /* Fuerza una proporción cuadrada (aspecto clave para el diseño). */
+    aspect-ratio: 1 / 1; 
+    /* Usa Flexbox para centrar la imagen dentro del contenedor cuadrado. */
+    display: flex;
+    /* Centra vertical y horizontalmente. */
+    align-items: center;
+    justify-content: center;
+    /* Espaciado interno para que la imagen no toque los bordes. */
+    padding: 2rem;
+}
+
+/* Estilos de la etiqueta <img> dentro del contenedor principal. */
+.main-image img {
+    /* Asegura que la imagen ocupe el máximo ancho posible sin desbordarse. */
+    max-width: 100%;
+    /* Asegura que la imagen ocupe el máximo alto posible sin desbordarse. */
+    max-height: 100%;
+    /* Escala la imagen para que se ajuste completamente dentro del contenedor sin ser recortada. */
+    object-fit: contain; 
+}
+
+/* Cuadrícula para la galería de miniaturas. */
+.thumbnail-gallery {
+    /* Usa Grid. */
+    display: grid;
+    /* Define 4 columnas iguales para las miniaturas. */
+    grid-template-columns: repeat(4, 1fr); 
+    /* Espacio entre las miniaturas. */
+    gap: 1rem;
+}
+
+/* Contenedor de cada miniatura. */
+.thumbnail {
+    /* Color de fondo oscuro. */
+    background-color: #0f172a;
+    /* Bordes redondeados. */
+    border-radius: 12px;
+    /* Borde transparente por defecto. */
+    border: 2px solid transparent; 
+    /* Oculta contenido desbordado. */
+    overflow: hidden;
+    /* Fuerza una proporción cuadrada para cada miniatura. */
+    aspect-ratio: 1 / 1;
+    /* Muestra un puntero. */
+    cursor: pointer;
+    /* Padding interno. */
+    padding: 0.5rem;
+    /* Transición suave para el cambio de borde. */
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo para la miniatura activa o al pasar el mouse. */
+.thumbnail.active,
+.thumbnail:hover {
+    /* Muestra un borde azul al ser activa o al pasar el mouse. */
+    border-color: #2563eb; 
+}
+
+/* Imagen dentro de la miniatura. */
+.thumbnail img {
+    /* Ocupa todo el ancho y alto del contenedor. */
+    width: 100%;
+    height: 100%;
+    /* Asegura que la imagen se ajuste sin recortarse. */
+    object-fit: contain;
+}
+
+/* --- Columna Derecha: Información del Producto --- */
+/* Contenedor principal de la información del producto. */
+.product-info {
+    /* Usa Flexbox para apilar los elementos verticalmente (título, precio, descripción, etc.). */
+    display: flex;
+    /* Dirección de apilamiento vertical. */
+    flex-direction: column;
+}
+
+/* Título principal del producto. */
+.product-title {
+    /* Tamaño de fuente grande. */
+    font-size: 3rem;
+    /* Margen inferior. */
+    margin-bottom: 1rem;
+    /* Color de texto blanco. */
+    color: #ffffff;
+    /* Altura de línea compacta. */
+    line-height: 1.2;
+}
+
+/* Contenedor de la valoración por estrellas. */
+.product-rating {
+    /* Usa Flexbox para alinear estrellas y contador en una fila. */
+    display: flex;
+    /* Centra verticalmente. */
+    align-items: center;
+    /* Espacio entre los elementos. */
+    gap: 0.8rem;
+    /* Margen inferior. */
+    margin-bottom: 1.5rem;
+}
+
+/* Contenedor de las estrellas. */
+.stars {
+    /* Color de las estrellas (amarillo/dorado). */
+    color: #f59e0b; 
+    /* Tamaño de fuente. */
+    font-size: 1.1rem;
+}
+
+/* Contador de opiniones. */
+.review-count {
+    /* Color de texto gris sutil. */
+    color: #94a3b8;
+    /* Tamaño de fuente. */
+    font-size: 0.95rem;
+}
+
+/* Precio de venta. */
+.product-price {
+    /* Tamaño de fuente muy grande. */
+    font-size: 2.5rem;
+    /* Grosor de fuente. */
+    font-weight: bold;
+    /* Color azul principal. */
+    color: #2563eb;
+    /* Margen inferior. */
+    margin-bottom: 1.5rem;
+}
+
+/* Párrafo de descripción. */
+.product-description {
+    /* Color de texto gris sutil. */
+    color: #94a3b8;
+    /* Altura de línea para legibilidad. */
+    line-height: 1.7;
+    /* Margen inferior. */
+    margin-bottom: 2.5rem;
+    /* Tamaño de fuente ligeramente grande. */
+    font-size: 1.05rem;
+}
+
+/* --- Caja de Especificaciones Técnicas --- */
+/* Contenedor de la caja de especificaciones. */
+.specs-box {
+    /* Color de fondo oscuro (como las tarjetas). */
+    background-color: #0f172a;
+    /* Borde sutil. */
+    border: 1px solid #1e293b;
+    /* Bordes redondeados. */
+    border-radius: 16px;
+    /* Espaciado interno. */
+    padding: 2rem;
+    /* Margen inferior. */
+    margin-bottom: 2.5rem;
+}
+
+/* Título de la caja de especificaciones. */
+.specs-box h3 {
+    /* Margen inferior. */
+    margin-bottom: 1.5rem;
+    /* Tamaño de fuente. */
+    font-size: 1.2rem;
+    /* Color de texto blanco. */
+    color: #ffffff;
+}
+
+/* Cuadrícula interna para las especificaciones (pares etiqueta-valor). */
+.specs-grid {
+    /* Usa Grid. */
+    display: grid;
+    /* Define dos columnas iguales para las especificaciones. */
+    grid-template-columns: 1fr 1fr; 
+    /* Espacio entre las filas (1.5rem) y entre las columnas (2rem). */
+    gap: 1.5rem 2rem; 
+}
+
+/* Contenedor de cada par etiqueta-valor. */
+.spec-item {
+    /* Usa Flexbox para apilar la etiqueta y el valor. */
+    display: flex;
+    /* Apilamiento vertical. */
+    flex-direction: column;
+    /* Pequeño espacio entre los elementos apilados. */
+    gap: 0.3rem;
+}
+
+/* Etiqueta de la especificación (ej. "Cámara"). */
+.spec-label {
+    /* Tamaño de fuente pequeño. */
+    font-size: 0.9rem;
+    /* Color gris sutil. */
+    color: #94a3b8;
+    /* Grosor de fuente medio. */
+    font-weight: 500;
+}
+
+/* Valor de la especificación (ej. "48MP Main"). */
+.spec-value {
+    /* Tamaño de fuente ligeramente grande. */
+    font-size: 1.1rem;
+    /* Color de texto blanco. */
+    color: #ffffff;
+    /* Grosor de fuente semi-negrita. */
+    font-weight: 600;
+}
+
+/* --- Botones de Acción --- */
+/* Contenedor de los botones de "Añadir al carrito" y "Comprar Ahora". */
+.product-actions {
+    /* Usa Flexbox. */
+    display: flex;
+    /* Espacio entre los botones. */
+    gap: 1.5rem;
+    /* Margen inferior. */
+    margin-bottom: 2rem;
+}
+
+/* Clase utilitaria para botones grandes. */
+.btn-lg {
+    /* Padding más generoso. */
+    padding: 1rem 2rem;
+    /* Los botones intentan ocupar el mismo ancho disponible. */
+    flex: 1; 
+    /* Centra el texto y el icono. */
+    justify-content: center;
+    /* Usa Flexbox (definido en style.css, pero se repite aquí para claridad). */
+    display: flex;
+    /* Centra verticalmente. */
+    align-items: center;
+    /* Espacio entre texto e icono. */
+    gap: 0.8rem;
+}
+
+/* --- Información Adicional (Iconos pequeños abajo) --- */
+/* Contenedor de la información de envío, garantía, etc. */
+.additional-info {
+    /* Usa Grid. */
+    display: grid;
+    /* Define columnas que se ajustan automáticamente, con un ancho mínimo de 180px. */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* Espacio entre los elementos. */
+    gap: 1rem;
+    /* Espaciado superior. */
+    padding-top: 1.5rem;
+    /* Línea separadora sutil en la parte superior. */
+    border-top: 1px solid #1e293b; 
+}
+
+/* Contenedor de cada ítem de información adicional (icono + texto). */
+.info-item {
+    /* Usa Flexbox. */
+    display: flex;
+    /* Centra verticalmente. */
+    align-items: center;
+    /* Espacio entre icono y texto. */
+    gap: 0.8rem;
+    /* Color de texto gris sutil. */
+    color: #94a3b8;
+    /* Tamaño de fuente. */
+    font-size: 0.95rem;
+    /* Centra el contenido dentro de su celda. */
+    justify-content: center; 
+}
+
+/* Iconos de la información adicional. */
+.info-item i {
+    /* Color azul principal para destacar el icono. */
+    color: #2563eb; 
+}
+
+/* --- Responsive Design --- */
+/* Media query para pantallas de tablet y anchos intermedios (900px y menos). */
+@media (max-width: 900px) {
+    /* Contenedor principal: */
+    .product-detail-container {
+        /* Cambia el Grid a una sola columna (apilando imágenes y luego info). */
+        grid-template-columns: 1fr;
+        /* Espacio entre las secciones apiladas. */
+        gap: 3rem;
+    }
+
+    /* Título: */
+    .product-title {
+        /* Reduce el tamaño de fuente para tablet. */
+        font-size: 2.5rem; 
+    }
+
+    /* Precio: */
+    .product-price {
+        /* Reduce el tamaño de fuente. */
+        font-size: 2rem;
+    }
+
+    /* Cuadrícula de especificaciones: */
+    .specs-grid {
+        /* Cambia a una sola columna para que las especificaciones se apilen verticalmente. */
+        grid-template-columns: 1fr; 
+        /* Espacio entre los elementos apilados. */
+        gap: 1.2rem;
+    }
+
+    /* Botones de acción: */
+    .product-actions {
+        /* Cambia la dirección de Flexbox a columna (botones uno debajo del otro). */
+        flex-direction: column; 
+        /* Reduce el espacio entre los botones apilados. */
+        gap: 1rem;
+    }
+
+    /* Botones grandes: */
+    .btn-lg {
+        /* Ocupan todo el ancho disponible. */
+        width: 100%; 
+    }
+}

@@ -1,0 +1,245 @@
+<!-- Define que el documento utiliza la sintaxis HTML5, la versión más reciente del lenguaje. -->
+<!DOCTYPE html>
+<!-- Etiqueta raíz del documento, estableciendo el idioma principal en español para accesibilidad y SEO. -->
+<html lang="es">
+<head>
+    <!-- Define la codificación de caracteres como UTF-8, esencial para soportar tildes, ñ y caracteres especiales. -->
+    <meta charset="UTF-8">
+    <!-- Configura la ventana gráfica (viewport) para asegurar que el diseño sea responsive en todos los dispositivos. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define el título que aparecerá en la pestaña del navegador. -->
+    <title>VOLTEX Mobile | Inicio</title>
+    <!-- Vincula la hoja de estilos CSS principal y global del proyecto (para estilos base, botones, footer, etc.). -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Vincula la hoja de estilos CSS específica para el layout de la página de inicio (Hero, secciones específicas). -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Carga la librería de iconos Font Awesome desde una Content Delivery Network (CDN). -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Inicio del encabezado de la página (Etiqueta semántica HTML5). -->
+    <header>
+        <!-- Contenedor del logotipo de la marca. -->
+        <div class="logo">
+            VOLTEXMobile
+        </div>
+        <!-- Contenedor de la navegación principal (Etiqueta semántica HTML5). -->
+        <nav>
+            <!-- Lista desordenada para los elementos del menú de navegación. -->
+            <ul>
+                <!-- Enlace a la página de inicio, marcado con la clase 'active' para resaltarlo. -->
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <!-- Enlace a la página de la tienda (ruta relativa a la carpeta pages). -->
+                <li><a href="pages/tienda.html">Tienda</a></li>
+                <!-- Enlace a la página 'Nosotros'. -->
+                <li><a href="pages/nosotros.html">Nosotros</a></li>
+                <!-- Enlace a la página de contacto. -->
+                <li><a href="pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Inicio del contenido principal de la página (Etiqueta semántica HTML5). -->
+    <main>
+        <!-- Sección Hero o principal (la primera y más destacada). -->
+        <section class="hero">
+            <!-- Contenedor del texto, título y botones del Hero. -->
+            <div class="hero-content">
+                <!-- Etiqueta destacada o "badge" para indicar un nuevo lanzamiento. -->
+                <span class="badge badge-new">Nuevo Lanzamiento</span>
+                <!-- Título principal de la página. -->
+                <h1>Tecnología que se <span class="highlight">adapta a tu ritmo</span></h1>
+                <!-- Párrafo descriptivo del Hero. -->
+                <p>Descubre la nueva generación de smartphones con rendimiento extremo, cámaras profesionales y diseño futurista.</p>
+                <!-- Contenedor de los botones de acción principales. -->
+                <div class="hero-buttons">
+                    <!-- Botón primario de acción (Enlace a la tienda). -->
+                    <a href="pages/tienda.html" class="btn btn-primary">Comprar Ahora <i class="fa-solid fa-arrow-right"></i></a>
+                    <!-- Botón secundario o de contorno (Saber Más). -->
+                    <button class="btn btn-outline">Saber Más</button>
+                </div>
+            </div>
+            <!-- Contenedor de la imagen visual del Hero. -->
+            <div class="hero-image">
+                <!-- Imagen principal de la sección Hero. -->
+                <img src="img/Hero_section.png" alt="Mujeres usando smartphones">
+            </div>
+        </section>
+
+        <!-- Sección de Categorías o Servicios Destacados. -->
+        <section class="feature-section">
+            <!-- Contenedor para limitar el ancho y centrar el contenido (global). -->
+            <div class="container">
+                <!-- Títulos descriptivos de la sección. -->
+                <div class="title-features-section">
+                    <h3>Explora por Categoría</h3>
+                    <p>Encuentra exactamente lo que buscas</p>
+                </div>
+                <!-- Cuadrícula (grid) para organizar las tarjetas de características. -->
+                <div class="features-grid">
+                    <!-- Tarjeta de característica 1: Envío Rápido -->
+                    <div class="feature-card">
+                        <i class="fa-solid fa-truck-fast feature-icon"></i>
+                        <h3>Envío Rápido</h3>
+                        <p>Recibe tu pedido en 24/48 horas.</p>
+                    </div>
+                    <!-- Tarjeta de característica 2: Garantía Oficial -->
+                    <div class="feature-card">
+                        <i class="fa-solid fa-shield feature-icon"></i>
+                        <h3>Garantía Oficial</h3>
+                        <p>Protección de fábrica de 1 año.</p>
+                    </div>
+                    <!-- Tarjeta de característica 3: Pago Seguro -->
+                    <div class="feature-card">
+                        <i class="fa-regular fa-credit-card feature-icon"></i>
+                        <h3>Pago Seguro</h3>
+                        <p>Transacciones encriptadas SSL.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Productos Destacados (Usa el contenedor global). -->
+        <section class="container products-section">
+            <!-- Cabecera de la sección con título, subtítulo y el enlace "Ver todo". -->
+            <div class="section-header">
+                <div>
+                    <h2>Productos Destacados</h2>
+                    <p>Lo mejor de la tecnología móvil seleccionado para ti</p>
+                </div>
+                <!-- Enlace para navegar a la página completa de la tienda. -->
+                <a href="pages/tienda.html" class="view-all">
+                    Ver todo <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Cuadrícula (grid) para mostrar las tarjetas de productos. -->
+            <div class="product-grid">
+                <!-- Artículo 1: Tarjeta de producto individual (Etiqueta semántica). -->
+                <article class="product-card">
+                    <span class="badge">DESTACADO</span>
+                    <div class="card-image">
+                        <img src="img/iphone-15-pro-max.webp" alt="iPhone 15 Pro Max">
+                    </div>
+                    <div class="card-info">
+                        <h3>iPhone 15 Pro Max</h3>
+                        <p>Titanio, Chip A17 Pro</p>
+                        <span class="price">$1,199</span>
+                        <a href="#" class="btn-link btn-view-details">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 2: Tarjeta de producto individual. -->
+                <article class="product-card">
+                    <span class="badge">DESTACADO</span>
+                    <div class="card-image">
+                        <img src="img/Samsung-s24-ultra.jpg" alt="Samsung Galaxy S24 Ultra">
+                    </div>
+                    <div class="card-info">
+                        <h3>Samsung S24 Ultra</h3>
+                        <p>Titanio, Galaxy AI</p>
+                        <span class="price">$1,299</span>
+                        <a href="#" class="btn-link btn-view-details">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 3: Tarjeta de producto individual. -->
+                <article class="product-card">
+                    <span class="badge">DESTACADO</span>
+                    <div class="card-image">
+                        <img src="img/google-pixel-8-pro.png" alt="Google Pixel 8 Pro">
+                    </div>
+                    <div class="card-info">
+                        <h3>Google Pixel 8 Pro</h3>
+                        <p>La mejor cámara con IA</p>
+                        <span class="price">$999</span>
+                        <a href="#" class="btn-link btn-view-details">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 4: Tarjeta de producto individual. -->
+                <article class="product-card">
+                    <span class="badge">DESTACADO</span>
+                    <div class="card-image">
+                         <img src="img/airpods-Pro-2nd-gen.png" alt="AirPods Pro">
+                    </div>
+                    <div class="card-info">
+                        <h3>AirPods Pro (2.ª)</h3>
+                        <p>Audio espacial</p>
+                        <span class="price">$249</span>
+                        <a href="#" class="btn-link btn-view-details">Ver Detalles</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <!-- Sección de Beneficios (Iconos circulares) -->
+        <section class="benefits-section">
+            <!-- Tarjeta de beneficio 1 -->
+            <div class="benefit-card">
+                <div class="icon-circle"><i class="fa-solid fa-truck-fast"></i></div>
+                <h3>Envío Rápido</h3>
+                <p>Seguimiento en tiempo real.</p>
+            </div>
+            <!-- Tarjeta de beneficio 2 -->
+            <div class="benefit-card">
+                <div class="icon-circle"><i class="fa-solid fa-shield"></i></div>
+                <h3>Garantía Oficial</h3>
+                <p>Garantía de fábrica de 1 año.</p>
+            </div>
+            <!-- Tarjeta de beneficio 3 -->
+            <div class="benefit-card">
+                <div class="icon-circle"><i class="fa-regular fa-credit-card"></i></div>
+                <h3>Pago Seguro</h3>
+                <p>Encriptación SSL de alto nivel.</p>
+            </div>
+            <!-- Tarjeta de beneficio 4 -->
+            <div class="benefit-card">
+                <div class="icon-circle"><i class="fa-solid fa-rotate"></i></div>
+                <h3>Devoluciones</h3>
+                <p>30 días para devolverlo.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Inicio del pie de página (Etiqueta semántica HTML5). -->
+    <footer>
+        <!-- Cuadrícula para organizar las columnas de información del footer. -->
+        <div class="footer-grid">
+            <!-- Columna 1: Logo y descripción breve. -->
+            <div class="footer-col">
+                <div class="logo">VOLTEXMobile</div>
+                <p>Tecnología que se adapta a tu ritmo.</p>
+            </div>
+            <!-- Columna 2: Enlaces Rápidos. -->
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="pages/tienda.html">Tienda</a></li>
+                    <li><a href="pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Columna 3: Categorías de productos. -->
+            <div class="footer-col">
+                <h4>Categorías</h4>
+                <ul>
+                    <li>iPhone</li>
+                    <li>Android</li>
+                    <li>Accesorios</li>
+                </ul>
+            </div>
+            <!-- Columna 4: Información de Contacto. -->
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Tecnología 123</p>
+                <p><i class="fa-solid fa-envelope"></i> contacto@voltex.com</p>
+            </div>
+        </div>
+        <!-- Sección de derechos de autor. -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 VOLTEX Mobile. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

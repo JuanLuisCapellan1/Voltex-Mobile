@@ -1,0 +1,158 @@
+<!-- Define que el documento utiliza la sintaxis HTML5. -->
+<!DOCTYPE html>
+<!-- Etiqueta raíz del documento, estableciendo el idioma en español. -->
+<html lang="es">
+<head>
+    <!-- Define la codificación de caracteres a UTF-8. -->
+    <meta charset="UTF-8">
+    <!-- Configura el viewport para el diseño responsive. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página que aparece en la pestaña del navegador. -->
+    <title>VOLTEX Mobile | Nosotros</title>
+    <!-- Vincula la hoja de estilos CSS global (subiendo un nivel con ../). -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Vincula la hoja de estilos CSS específica para la página 'Nosotros'. -->
+    <link rel="stylesheet" href="../css/nosotros.css">
+    <!-- Carga la librería de iconos Font Awesome. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- INICIO DEL HEADER (Encabezado y Navegación) -->
+    <header>
+        <!-- Contenedor del logotipo. -->
+        <div class="logo">VOLTEXMobile</div>
+        <!-- Barra de navegación principal. -->
+        <nav>
+            <!-- Lista de enlaces del menú. -->
+            <ul>
+                <!-- Enlace a la página de inicio. -->
+                <li><a href="../index.html">Inicio</a></li>
+                <!-- Enlace a la tienda. -->
+                <li><a href="tienda.html">Tienda</a></li>
+                <!-- Enlace a la página 'Nosotros', marcado como activo. -->
+                <li><a href="nosotros.html" class="active">Nosotros</a></li>
+                <!-- Enlace a la página de contacto. -->
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- INICIO DEL CONTENIDO PRINCIPAL DE LA PÁGINA -->
+    <main>
+        
+        <!-- Wrapper para centrar el contenido y aplicar padding lateral. -->
+        <div class="about-wrapper">
+            
+            <!-- Sección de la cabecera (Título y subtítulo centrados). -->
+            <section class="about-header">
+                <!-- Título principal de la página. -->
+                <h1>Sobre VOLTEX Mobile</h1>
+                <!-- Párrafo de misión o descripción principal. -->
+                <p>Somos apasionados por la tecnología. Nuestra misión es conectar a las personas con la innovación que mejora sus vidas.</p>
+            </section>
+
+            <!-- Sección de la cuadrícula de valores fundamentales (Grid semántico). -->
+            <section class="values-grid">
+                
+                <!-- Tarjeta de valor 1: Centrados en el Cliente. -->
+                <div class="value-card">
+                    <!-- Contenedor del icono con fondo de color azul. -->
+                    <div class="icon-box icon-blue">
+                        <!-- Icono de usuario (cliente). -->
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <!-- Título del valor. -->
+                    <h3>Centrados en el Cliente</h3>
+                    <!-- Descripción del valor. -->
+                    <p>Tu satisfacción es nuestra prioridad. Ofrecemos soporte personalizado y garantía real.</p>
+                </div>
+
+                <!-- Tarjeta de valor 2: Innovación Constante. -->
+                <div class="value-card">
+                    <!-- Contenedor del icono con fondo de color morado. -->
+                    <div class="icon-box icon-purple">
+                        <!-- Icono de objetivo o diana (bullseye). -->
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <!-- Título del valor. -->
+                    <h3>Innovación Constante</h3>
+                    <!-- Descripción del valor. -->
+                    <p>Siempre estamos buscando lo último en tecnología para traerte los dispositivos más avanzados.</p>
+                </div>
+
+                <!-- Tarjeta de valor 3: Calidad Garantizada. -->
+                <div class="value-card">
+                    <!-- Contenedor del icono con fondo de color verde. -->
+                    <div class="icon-box icon-green">
+                        <!-- Icono de medalla (calidad). -->
+                        <i class="fa-solid fa-medal"></i> </div>
+                    <!-- Título del valor. -->
+                    <h3>Calidad Garantizada</h3>
+                    <!-- Descripción del valor. -->
+                    <p>Solo trabajamos con marcas líderes y productos originales verificados.</p>
+                </div>
+
+            </section>
+        </div>
+
+        <!-- Sección de Nuestra Historia (Layout de dos columnas, imagen y texto). -->
+        <section class="history-section">
+            <!-- Columna de la imagen (Flex: 1 para ocupar espacio). -->
+            <div style="flex: 1;">
+                 <!-- Imagen de la oficina o historia, con estilos inline para bordes y sombra. -->
+                 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Oficina Moderna" style="border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            </div>
+            <!-- Columna del texto (Flex: 1 para ocupar espacio). -->
+            <div style="flex: 1;">
+                <!-- Título de la historia, con estilos inline para tamaño y margen. -->
+                <h2 style="font-size: 2rem; margin-bottom: 1rem;">Nuestra Historia</h2>
+                <!-- Párrafo descriptivo de la historia, con estilos inline para color y altura de línea. -->
+                <p style="color: #94a3b8; line-height: 1.8;">
+                    Fundada en 2023, VOLTEX Mobile nació con la idea de simplificar la compra de tecnología en línea. Nos dimos cuenta de que faltaba una tienda especializada que ofreciera una experiencia premium, donde la confianza y la velocidad fueran la norma, no la excepción. Hoy, seguimos creciendo con el mismo objetivo: poner el futuro en tus manos.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- INICIO DEL FOOTER (Pie de página global) -->
+    <footer>
+        <!-- Cuadrícula para organizar las columnas de información del footer. -->
+        <div class="footer-grid">
+            <!-- Columna 1: Logo y descripción breve. -->
+            <div class="footer-col">
+                <div class="logo">VOLTEXMobile</div>
+                <p>Tecnología que se adapta a tu ritmo.</p>
+            </div>
+            <!-- Columna 2: Enlaces Rápidos (rutas relativas a la carpeta 'pages'). -->
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Columna 3: Categorías. -->
+            <div class="footer-col">
+                <h4>Categorías</h4>
+                <ul>
+                    <li>iPhone</li>
+                    <li>Android</li>
+                    <li>Accesorios</li>
+                </ul>
+            </div>
+            <!-- Columna 4: Información de Contacto. -->
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Tecnología 123</p>
+                <p><i class="fa-solid fa-envelope"></i> contacto@voltex.com</p>
+            </div>
+        </div>
+        <!-- Sección de derechos de autor. -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 VOLTEX Mobile. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

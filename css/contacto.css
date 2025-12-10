@@ -1,0 +1,253 @@
+/* css/contacto.css */
+
+/* --- Layout Principal --- */
+/* Wrapper principal para centrar y limitar el ancho del contenido de la página. */
+.contact-wrapper {
+    /* Espaciado interno (3rem arriba, 5% a los lados, 5rem abajo). */
+    padding: 3rem 5% 5rem;
+    /* Ancho máximo para el contenido. */
+    max-width: 1200px;
+    /* Centra el contenedor horizontalmente. */
+    margin: 0 auto;
+}
+
+/* Contenedor de la cabecera (Título y subtítulo). */
+.contact-header {
+    /* Centra el texto. */
+    text-align: center;
+    /* Margen inferior para separarlo del formulario/info. */
+    margin-bottom: 3rem;
+}
+
+/* Título H1 de la página. */
+.contact-header h1 {
+    /* Tamaño de fuente. */
+    font-size: 2.5rem;
+    /* Color de texto blanco. */
+    color: #ffffff;
+    /* Margen inferior. */
+    margin-bottom: 0.5rem;
+}
+
+/* Título H3 de las tarjetas (Info o Mensaje). */
+.title-contact-card {
+    /* Centra el texto del título dentro de la tarjeta (aunque ya estaba en el H3 en el HTML, lo asegura aquí). */
+    text-align: center;
+}
+/* --- Grid del Contenido --- */
+/* Contenedor que establece el layout de dos columnas. */
+.contact-grid {
+    /* Usa CSS Grid. */
+    display: grid;
+    /* Define dos columnas iguales (1fr 1fr). */
+    grid-template-columns: 1fr 1fr;
+    /* Espacio entre las columnas. */
+    gap: 2rem;
+    /* Alinea el contenido de las celdas al inicio verticalmente. */
+    align-items: start;
+}
+
+/* --- Tarjetas (Cards) --- */
+/* Estilo base de las tarjetas (tanto para Info de Contacto como para el Formulario). */
+.contact-card {
+    /* Color de fondo oscuro. */
+    background-color: #0f172a; 
+    /* Borde sutil. */
+    border: 1px solid #1e293b;
+    /* Bordes redondeados. */
+    border-radius: 16px;
+    /* Espaciado interno. */
+    padding: 2rem 1rem;
+    /* Margen inferior (útil para separar la tarjeta del mapa en la columna izquierda). */
+    margin-bottom: 2rem; 
+    /* Sombra ligera para dar profundidad. */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Título H3 dentro de las tarjetas (aunque el H3 ya tiene estilos, este bloque estaba en el código original). */
+.contact-card h3 {
+    /* Tamaño de fuente. */
+    font-size: 1.5rem;
+    /* Margen inferior. */
+    margin-bottom: 1.5rem;
+    /* Color de texto blanco. */
+    color: #ffffff;
+}
+
+/* --- Items de Información (Icono + Texto) --- */
+/* Contenedor de cada línea de información (Ubicación, Teléfono, Email). */
+.info-item {
+    /* Usa Flexbox para alinear el icono y el texto en una fila. */
+    display: flex;
+    /* Centra los ítems verticalmente. */
+    align-items: center;
+    /* Espacio entre el icono y el texto. */
+    gap: 1.2rem;
+    /* Margen inferior. */
+    margin-bottom: 1.5rem;
+}
+
+/* Contenedor del icono (el círculo azul transparente). */
+.icon-box {
+    /* Ancho y alto fijos. */
+    width: 45px;
+    height: 45px;
+    /* Fondo azul con baja opacidad. */
+    background-color: rgba(37, 99, 235, 0.1); 
+    /* Bordes ligeramente redondeados. */
+    border-radius: 10px;
+    /* Usa Flexbox para centrar el icono. */
+    display: flex;
+    /* Centra el icono. */
+    align-items: center;
+    justify-content: center;
+    /* Color del icono azul primario. */
+    color: #2563eb;
+    /* Tamaño del icono. */
+    font-size: 1.2rem;
+    /* Evita que el icono se encoja en pantallas pequeñas. */
+    flex-shrink: 0;
+}
+
+/* Texto en negrita (ej. "Ubicación", "Teléfono"). */
+.info-content strong {
+    /* Muestra el texto en su propia línea. */
+    display: block;
+    /* Color de texto blanco. */
+    color: #ffffff;
+    /* Pequeño margen inferior. */
+    margin-bottom: 0.2rem;
+}
+
+/* Párrafos de descripción (dirección, números, horarios). */
+.info-content p {
+    /* Color gris sutil. */
+    color: #94a3b8;
+    /* Tamaño de fuente. */
+    font-size: 0.95rem;
+}
+
+/* --- Mapa --- */
+/* Contenedor simulado del mapa. */
+.map-container {
+    /* Altura fija. */
+    height: 250px;
+    /* Fondo más oscuro que la tarjeta. */
+    background-color: #1e293b;
+    /* Bordes redondeados. */
+    border-radius: 16px;
+    /* Usa Flexbox para centrar el texto simulado. */
+    display: flex;
+    /* Centra vertical y horizontalmente. */
+    align-items: center;
+    justify-content: center;
+    /* Color de texto gris. */
+    color: #94a3b8;
+    /* Borde sutil. */
+    border: 1px solid #334155;
+}
+
+/* --- Formulario --- */
+/* Cuadrícula para la fila de Nombre y Apellido. */
+.form-grid-row {
+    /* Usa Grid. */
+    display: grid;
+    /* Dos columnas iguales para los campos. */
+    grid-template-columns: 1fr 1fr;
+    /* Espacio entre las columnas de los campos. */
+    gap: 1rem;
+}
+
+/* Contenedor de cada campo de formulario (label + input). */
+.form-group {
+    /* Usa Flexbox para apilar label e input. */
+    display: flex;
+    /* Dirección vertical. */
+    flex-direction: column;
+    /* Espacio entre label e input. */
+    gap: 0.5rem;
+    /* Margen inferior para separar los grupos de campos. */
+    margin-bottom: 1.5rem;
+}
+
+/* Etiqueta de los campos. */
+.form-group label {
+    /* Tamaño de fuente pequeño. */
+    font-size: 0.9rem;
+    /* Color gris sutil. */
+    color: #94a3b8;
+    /* Grosor de fuente medio. */
+    font-weight: 500;
+}
+
+/* Estilos de los Inputs y Textarea. */
+.form-input {
+    /* Fondo oscuro (más oscuro que la tarjeta, para contraste). */
+    background-color: #1e293b; 
+    /* Borde gris sutil. */
+    border: 1px solid #334155;
+    /* Bordes redondeados. */
+    border-radius: 8px;
+    /* Espaciado interno. */
+    padding: 0.9rem 1rem;
+    /* Color del texto de entrada. */
+    color: white;
+    /* Hereda la fuente principal del body. */
+    font-family: inherit;
+    /* Tamaño de fuente. */
+    font-size: 0.95rem;
+    /* Transición para el borde al hacer focus. */
+    transition: border-color 0.3s ease;
+    /* Ocupa todo el ancho del contenedor. */
+    width: 100%;
+}
+
+/* Efecto al seleccionar o hacer foco en el input/textarea. */
+.form-input:focus {
+    /* Elimina el contorno por defecto del navegador. */
+    outline: none;
+    /* Cambia el color del borde a azul primario. */
+    border-color: #2563eb; 
+}
+
+/* Estilos para el texto placeholder. */
+.form-input::placeholder {
+    /* Color gris oscuro. */
+    color: #64748b;
+}
+
+/* Estilo para el botón de envío (que ocupa todo el ancho). */
+.btn-full {
+    /* Ocupa todo el ancho. */
+    width: 100%;
+    /* Centra el texto y el icono (ya que es un inline-flex). */
+    justify-content: center;
+    /* Padding uniforme. */
+    padding: 1rem;
+    /* Tamaño de fuente estándar. */
+    font-size: 1rem;
+}
+
+/* --- Responsive Design --- */
+/* Media query para pantallas de móvil (768px y menos). */
+@media (max-width: 768px) {
+    /* Contenedor principal: */
+    .contact-grid {
+        /* Cambia el Grid a una sola columna (apilando Info | Formulario). */
+        grid-template-columns: 1fr; 
+        /* Espacio entre las secciones apiladas. */
+        gap: 3rem;
+    }
+
+    /* Fila de Nombre y Apellido: */
+    .form-grid-row {
+        /* Cambia a una sola columna (Nombre y Apellido se apilan). */
+        grid-template-columns: 1fr; 
+    }
+
+    /* Wrapper principal: */
+    .contact-wrapper {
+        /* Reduce el padding superior en móvil. */
+        padding-top: 2rem;
+    }
+}

@@ -1,0 +1,206 @@
+<!-- Define que el documento utiliza la sintaxis HTML5. -->
+<!DOCTYPE html>
+<!-- Etiqueta raíz del documento, estableciendo el idioma en español. -->
+<html lang="es">
+<head>
+    <!-- Define la codificación de caracteres a UTF-8. -->
+    <meta charset="UTF-8">
+    <!-- Configura el viewport para el diseño responsive. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página. -->
+    <title>VOLTEX Mobile | Contacto</title>
+    <!-- Vincula la hoja de estilos CSS global (subiendo un nivel con ../). -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Vincula la hoja de estilos CSS específica para la página de contacto. -->
+    <link rel="stylesheet" href="../css/contacto.css">
+    <!-- Carga la librería de iconos Font Awesome. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- INICIO DEL HEADER (Encabezado y Navegación) -->
+    <header>
+        <!-- Contenedor del logotipo. -->
+        <div class="logo">VOLTEXMobile</div>
+        <!-- Barra de navegación principal. -->
+        <nav>
+            <!-- Lista de enlaces del menú. -->
+            <ul>
+                <!-- Enlace a la página de inicio. -->
+                <li><a href="../index.html">Inicio</a></li>
+                <!-- Enlace a la tienda. -->
+                <li><a href="tienda.html">Tienda</a></li>
+                <!-- Enlace a la página 'Nosotros'. -->
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <!-- Enlace a la página de contacto, marcado como activo. -->
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- INICIO DEL CONTENIDO PRINCIPAL DE LA PÁGINA -->
+    <main class="contact-wrapper">
+        
+        <!-- Sección de la cabecera (Título y subtítulo centrados). -->
+        <section class="contact-header">
+            <!-- Título principal de la página. -->
+            <h1>Contáctanos</h1>
+            <!-- Párrafo descriptivo, con estilo inline para heredar el color gris. -->
+            <p style="color: #94a3b8;">Estamos aquí para ayudarte con cualquier duda o consulta.</p>
+        </section>
+
+        <!-- Contenedor principal que usa Grid para dividir la página en dos columnas (Info | Formulario). -->
+        <div class="contact-grid">
+            
+            <!-- Contenedor de la columna izquierda (Información de contacto y Mapa). -->
+            <div class="left-column">
+                <!-- Tarjeta de Información de Contacto. -->
+                <div class="contact-card">
+                    <h3 class="title-contact-card">Información de Contacto</h3>
+                    
+                    <!-- Item de información 1: Ubicación. -->
+                    <div class="info-item">
+                        <!-- Contenedor del icono (círculo azul). -->
+                        <div class="icon-box">
+                            <!-- Icono de ubicación. -->
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <!-- Texto de la información. -->
+                        <div class="info-content">
+                            <strong>Ubicación</strong>
+                            <p>Av. Tecnología 123, Ciudad Futura, CP 12345</p>
+                        </div>
+                    </div>
+
+                    <!-- Item de información 2: Teléfono. -->
+                    <div class="info-item">
+                        <div class="icon-box">
+                            <!-- Icono de teléfono. -->
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong>Teléfono</strong>
+                            <p>+1 (555) 123-4567</p>
+                            <p style="font-size: 0.8rem;">Lunes a Viernes: 9am - 6pm</p>
+                        </div>
+                    </div>
+
+                    <!-- Item de información 3: Email. -->
+                    <div class="info-item">
+                        <div class="icon-box">
+                            <!-- Icono de correo electrónico. -->
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <strong>Email</strong>
+                            <p>contacto@voltexmobile.com</p>
+                            <p style="font-size: 0.8rem;">Respondemos en menos de 24h</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor simulado para el Mapa de Google Maps. -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.6876948474003!2d-69.85108!3d18.495935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI5JzQ1LjQiTiA2OcKwNTEnMDMuOSJX!5e0!3m2!1ses!2sdo!4v1733614130000!5m2!1ses!2sdo" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius: 12px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Formulario de Contacto. -->
+            <div class="contact-card">
+                <h3 class="title-contact-card">Envíanos un Mensaje</h3>
+                
+                <!-- Etiqueta semántica FORM, necesaria para enviar datos. -->
+                <form action="#" method="POST">
+                    
+                    <!-- Fila que usa Grid para colocar Nombre y Apellido uno al lado del otro. -->
+                    <div class="form-grid-row">
+                        <!-- Grupo de formulario para el campo Nombre. -->
+                        <div class="form-group">
+                            <!-- Etiqueta asociada al input 'nombre'. -->
+                            <label for="nombre">Nombre</label>
+                            <!-- Campo de entrada de texto (requerido). -->
+                            <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Tu nombre" required>
+                        </div>
+                        <!-- Grupo de formulario para el campo Apellido. -->
+                        <div class="form-group">
+                            <!-- Etiqueta asociada al input 'apellido'. -->
+                            <label for="apellido">Apellido</label>
+                            <!-- Campo de entrada de texto (requerido). -->
+                            <input type="text" id="apellido" name="apellido" class="form-input" placeholder="Tu apellido" required>
+                        </div>
+                    </div>
+
+                    <!-- Grupo de formulario para el campo Email. -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <!-- Campo de entrada de email (requerido). -->
+                        <input type="email" id="email" name="email" class="form-input" placeholder="tucorreo@ejemplo.com" required>
+                    </div>
+
+                    <!-- Grupo de formulario para el campo Mensaje. -->
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <!-- Área de texto para mensajes largos. -->
+                        <textarea id="mensaje" name="mensaje" rows="5" class="form-input" placeholder="¿En qué podemos ayudarte?"></textarea>
+                    </div>
+
+                    <!-- Botón de envío del formulario. -->
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Enviar Mensaje <i class="fa-solid fa-paper-plane" style="margin-left: 8px;"></i>
+                    </button>
+                    
+                </form> 
+            </div>
+
+        </div>
+    </main>
+    
+    <!-- INICIO DEL FOOTER (Pie de página global) -->
+    <footer>
+        <!-- Cuadrícula para organizar las columnas de información del footer. -->
+        <div class="footer-grid">
+            <!-- Columna 1: Logo y descripción breve. -->
+            <div class="footer-col">
+                <div class="logo">VOLTEXMobile</div>
+                <p>Tecnología que se adapta a tu ritmo.</p>
+            </div>
+            <!-- Columna 2: Enlaces Rápidos (rutas relativas a la carpeta 'pages'). -->
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Columna 3: Categorías. -->
+            <div class="footer-col">
+                <h4>Categorías</h4>
+                <ul>
+                    <li>iPhone</li>
+                    <li>Android</li>
+                    <li>Accesorios</li>
+                </ul>
+            </div>
+            <!-- Columna 4: Información de Contacto. -->
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Tecnología 123</p>
+                <p><i class="fa-solid fa-envelope"></i> contacto@voltex.com</p>
+            </div>
+        </div>
+        <!-- Sección de derechos de autor. -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 VOLTEX Mobile. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

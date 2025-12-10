@@ -1,0 +1,161 @@
+/* css/tienda.css */
+
+/* --- Layout Principal --- */
+/* Contenedor principal de la página de la tienda. */
+.shop-container {
+    /* Espaciado interno general. */
+    padding: 3rem 5%;
+    /* Asegura una altura mínima para que el footer se mantenga abajo incluso con pocos productos. */
+    min-height: 80vh; 
+}
+
+/* Contenedor de la cabecera (Título y descripción) de la tienda. */
+.shop-header {
+    /* Margen inferior para separarlo del layout principal (sidebar + productos). */
+    margin-bottom: 2rem;
+}
+
+/* Título H1 de la tienda. */
+.shop-header h1 {
+    /* Tamaño de fuente. */
+    font-size: 2.5rem;
+    /* Margen inferior. */
+    margin-bottom: 0.5rem;
+}
+
+/* Grid de dos columnas: Sidebar (250px) | Contenido (Resto) */
+/* Contenedor que establece la división principal de la página. */
+.shop-layout {
+    /* Usa CSS Grid para el layout. */
+    display: grid;
+    /* Define dos columnas: la primera de ancho fijo (250px) y la segunda el resto del espacio (1fr). */
+    grid-template-columns: 250px 1fr;
+    /* Espacio entre las dos columnas. */
+    gap: 3rem;
+    /* Alinea el contenido de las celdas Grid al inicio verticalmente. */
+    align-items: start; 
+}
+
+/* --- Sidebar (Categorías) --- */
+/* Estilos para la barra lateral (categorías). */
+.shop-sidebar {
+    /* Color de fondo oscuro (proveniente del #0f172a). */
+    background-color: #0f172a; 
+    /* Espaciado interno. */
+    padding: 1.5rem;
+    /* Bordes redondeados. */
+    border-radius: 16px;
+    /* Borde sutil. */
+    border: 1px solid #1e293b;
+    /* Permite que el sidebar se quede fijo mientras el contenido principal se desplaza. */
+    position: sticky;
+    /* Distancia desde la parte superior de la ventana al quedar fijo (deja espacio para el header). */
+    top: 100px; 
+}
+
+/* Título de la sección de categorías dentro del sidebar. */
+.shop-sidebar h3 {
+    /* Margen inferior. */
+    margin-bottom: 1.5rem;
+    /* Tamaño de fuente. */
+    font-size: 1.2rem;
+    /* Línea divisoria en la parte inferior. */
+    border-bottom: 1px solid #1e293b;
+    /* Espaciado inferior para separar el título de la línea. */
+    padding-bottom: 0.5rem;
+}
+
+/* Estilos para cada ítem de categoría en la lista. */
+.category-list li {
+    /* Espaciado interno. */
+    padding: 0.8rem 1rem;
+    /* Margen inferior para separar ítems. */
+    margin-bottom: 0.5rem;
+    /* Bordes ligeramente redondeados. */
+    border-radius: 8px;
+    /* Muestra un puntero al pasar el mouse. */
+    cursor: pointer;
+    /* Transición suave para todos los cambios de estilo. */
+    transition: all 0.3s ease;
+    /* Color de texto gris sutil (proveniente del #94a3b8). */
+    color: #94a3b8;
+    /* Grosor de fuente. */
+    font-weight: 500;
+}
+
+/* Efecto al pasar el mouse sobre un ítem de categoría. */
+.category-list li:hover {
+    /* Color de fondo sutilmente más oscuro. */
+    background-color: #1e293b;
+    /* Color de texto blanco. */
+    color: white;
+    /* Desplaza el padding a la izquierda para un efecto de animación. */
+    padding-left: 1.2rem; 
+}
+
+/* Clase para la categoría que está actualmente seleccionada. */
+.category-list li.active {
+    /* Fondo azul primario (proveniente del #2563eb). */
+    background-color: #2563eb;
+    /* Texto blanco. */
+    color: white;
+}
+
+/* --- Ajustes del Grid de Productos para Tienda --- */
+/* Contenedor de la sección de productos. */
+.shop-products {
+    /* Usa Grid para las tarjetas de productos. */
+    display: grid;
+    /* Columnas adaptables: mínimo 260px, máximo 1fr. */
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    /* Espacio entre las tarjetas. */
+    gap: 2rem;
+}
+
+/* --- Responsive Design --- */
+/* Media query: aplica estilos cuando el ancho de la pantalla es de 900px o menos (Tablets y Móviles). */
+@media (max-width: 900px) {
+    /* En tablets y móviles, cambiamos el layout a una sola columna */
+    .shop-layout {
+        /* Cambia el Grid a una sola columna que ocupa todo el ancho. */
+        grid-template-columns: 1fr;
+        /* Espacio entre los elementos apilados (sidebar y productos). */
+        gap: 2rem;
+    }
+
+    /* El sidebar deja de ser sticky y fijo, se vuelve una barra superior */
+    .shop-sidebar {
+        /* Vuelve la posición a estática (ya no se pega arriba). */
+        position: static;
+        /* Margen inferior para separarlo del contenido. */
+        margin-bottom: 1rem;
+    }
+
+    /* Lista de categorías en modo móvil. */
+    .category-list {
+        /* Usa Flexbox para colocar los ítems uno al lado del otro. */
+        display: flex;
+        /* Permite que los ítems se envuelvan a la siguiente línea si no caben. */
+        flex-wrap: wrap; 
+        /* Espacio reducido entre los ítems. */
+        gap: 0.5rem;
+    }
+
+    /* Ítems de categoría en modo móvil. */
+    .category-list li {
+        /* Elimina el margen inferior que tenía en escritorio. */
+        margin-bottom: 0;
+        /* Reduce el padding para que sean más compactos. */
+        padding: 0.5rem 1rem;
+        /* Reduce el tamaño de fuente. */
+        font-size: 0.9rem;
+        /* Añade un borde visible para delimitar cada botón de categoría. */
+        border: 1px solid #334155;
+    }
+    
+    /* Efecto hover en móviles. */
+    .category-list li:hover {
+        /* Elimina la animación de desplazamiento de padding en móvil. */
+        padding-left: 1rem; 
+    }
+}

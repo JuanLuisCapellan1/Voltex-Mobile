@@ -1,0 +1,211 @@
+<!-- Define que el documento utiliza la sintaxis HTML5. -->
+<!DOCTYPE html>
+<!-- Etiqueta raíz del documento, estableciendo el idioma en español. -->
+<html lang="es">
+<head>
+    <!-- Define la codificación de caracteres a UTF-8. -->
+    <meta charset="UTF-8">
+    <!-- Configura el viewport para el diseño responsive. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página de la tienda. -->
+    <title>VOLTEX Mobile | Tienda</title>
+    <!-- Vincula la hoja de estilos CSS global (subiendo un nivel con ../). -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Vincula la hoja de estilos CSS específica de la tienda. -->
+    <link rel="stylesheet" href="../css/tienda.css">
+    <!-- Carga la librería de iconos Font Awesome. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- INICIO DEL HEADER (Navegación) -->
+    <header>
+        <!-- Contenedor del logotipo. -->
+        <div class="logo">VOLTEXMobile</div>
+        <!-- Barra de navegación principal. -->
+        <nav>
+            <!-- Lista de enlaces del menú. -->
+            <ul>
+                <!-- Enlace a la página de inicio (subiendo un nivel). -->
+                <li><a href="../index.html">Inicio</a></li>
+                <!-- Enlace a la tienda, marcado como activo. -->
+                <li><a href="tienda.html" class="active">Tienda</a></li>
+                <!-- Enlace a la página 'Nosotros'. -->
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <!-- Enlace a la página de contacto. -->
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- INICIO DEL CONTENIDO PRINCIPAL DE LA TIENDA -->
+    <main class="shop-container">
+        
+        <!-- Cabecera de la página de la tienda. -->
+        <div class="shop-header">
+            <!-- Título principal. -->
+            <h1>Tienda</h1>
+            <!-- Párrafo descriptivo. El estilo de color está inline para heredar de la variable global #94a3b8. -->
+            <p style="color: #94a3b8;">Explora nuestro catálogo completo de tecnología.</p>
+        </div>
+
+        <!-- Contenedor principal que usa Grid para el layout: Sidebar | Productos. -->
+        <div class="shop-layout">
+            
+            <!-- Sidebar o barra lateral para filtros y categorías (Etiqueta semántica). -->
+            <aside class="shop-sidebar">
+                <!-- Título de la sección de categorías. -->
+                <h3>Categorías</h3>
+                <!-- Lista desordenada de categorías. -->
+                <ul class="category-list">
+                    <!-- Categoría "Todos", marcada como activa. -->
+                    <li class="active">Todos</li>
+                    <!-- Categoría iPhone. -->
+                    <li>iPhone</li>
+                    <!-- Categoría Android. -->
+                    <li>Android</li>
+                    <!-- Categoría Tablets. -->
+                    <li>Tablets</li>
+                    <!-- Categoría Accesorios. -->
+                    <li>Accesorios</li>
+                    <!-- Categoría Audio. -->
+                    <li>Audio</li>
+                </ul>
+            </aside>
+
+            <!-- Sección de productos (Cuadrícula de artículos). -->
+            <section class="shop-products">
+                
+                <!-- Artículo 1: Tarjeta de producto individual. -->
+                <article class="product-card">
+                    <!-- Etiqueta de destacado. -->
+                    <span class="badge">DESTACADO</span>
+                    <!-- Contenedor de la imagen. -->
+                    <div class="card-image">
+                        <!-- Imagen del producto. La ruta sube al nivel raíz (../img/). -->
+                        <img src="../img/iphone-15-pro-max.webp" alt="iPhone 15 Pro Max">
+                    </div>
+                    <!-- Contenedor de la información textual. -->
+                    <div class="card-info">
+                        <h3>iPhone 15 Pro Max</h3>
+                        <p>Titanio y chip A17 Pro.</p>
+                        <!-- Etiqueta de precio. -->
+                        <span class="price">$1199</span>
+                        <!-- Enlace para ver los detalles del producto. -->
+                        <a href="producto.html" class="btn-link btn-view-details">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 2: Tarjeta de producto individual. -->
+                <article class="product-card">
+                    <div class="card-image">
+                        <img src="../img/Samsung-s24-ultra.jpg" alt="Samsung S24">
+                    </div>
+                    <div class="card-info">
+                        <h3>Samsung Galaxy S24</h3>
+                        <p>La experiencia definitiva con IA.</p>
+                        <span class="price">$1299</span>
+                        <a href="#" class="btn-link btn-view-details">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 3: Tarjeta de producto individual (Con estilo de oferta inline). -->
+                <article class="product-card">
+                    <!-- Etiqueta de oferta, con color de fondo personalizado inline. -->
+                    <span class="badge" style="background-color: #f59e0b;">OFERTA</span>
+                    <div class="card-image">
+                         <img src="../img/google-pixel-8-pro.png" alt="Pixel 8">
+                    </div>
+                    <div class="card-info">
+                        <h3>Google Pixel 8 Pro</h3>
+                        <p>El Android más inteligente.</p>
+                        <span class="price">$999</span>
+                        <a href="#" class="btn-link btn-view-details">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 4: Tarjeta de producto individual. -->
+                <article class="product-card">
+                    <div class="card-image">
+                         <img src="../img/airpods-Pro-2nd-gen.png" alt="AirPods">
+                    </div>
+                    <div class="card-info">
+                        <h3>AirPods Pro (2.ª gen)</h3>
+                        <p>Cancelación activa de ruido.</p>
+                        <span class="price">$249</span>
+                        <a href="#" class="btn-link btn-view-details">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 5: Tarjeta de producto (Imagen de Unsplash como fallback). -->
+                <article class="product-card">
+                    <div class="card-image">
+                         <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=500&q=80" alt="Smartwatch">
+                    </div>
+                    <div class="card-info">
+                        <h3>Apple Watch Ultra</h3>
+                        <p>Para la aventura extrema.</p>
+                        <span class="price">$799</span>
+                        <a href="#" class="btn-link btn-view-details">Ver Detalles</a>
+                    </div>
+                </article>
+
+                <!-- Artículo 6: Tarjeta de producto. -->
+                <article class="product-card">
+                    <div class="card-image">
+                         <img src="../img/magsafe-charger.jpg" alt="Cargador">
+                    </div>
+                    <div class="card-info">
+                        <h3>Cargador MagSafe</h3>
+                        <p>Carga inalámbrica rápida.</p>
+                        <span class="price">$39</span>
+                        <a href="#" class="btn-link btn-view-details">Ver Detalles</a>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- INICIO DEL FOOTER (Pie de página) -->
+    <footer>
+        <!-- Cuadrícula para organizar las columnas de información del footer. -->
+        <div class="footer-grid">
+            <!-- Columna 1: Logo y descripción breve. -->
+            <div class="footer-col">
+                <div class="logo">VOLTEXMobile</div>
+                <p>Tecnología que se adapta a tu ritmo.</p>
+            </div>
+            <!-- Columna 2: Enlaces Rápidos. -->
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <!-- Los enlaces aquí son relativos a la carpeta 'pages'. -->
+                <ul>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Columna 3: Categorías de productos. -->
+            <div class="footer-col">
+                <h4>Categorías</h4>
+                <ul>
+                    <li>iPhone</li>
+                    <li>Android</li>
+                    <li>Accesorios</li>
+                </ul>
+            </div>
+            <!-- Columna 4: Información de Contacto. -->
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Tecnología 123</p>
+                <p><i class="fa-solid fa-envelope"></i> contacto@voltex.com</p>
+            </div>
+        </div>
+        <!-- Sección de derechos de autor. -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 VOLTEX Mobile. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

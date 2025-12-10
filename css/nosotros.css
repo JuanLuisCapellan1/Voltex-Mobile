@@ -1,0 +1,203 @@
+/* css/nosotros.css */
+
+/* --- Contenedor Principal --- */
+/* Wrapper para centrar y limitar el ancho del contenido de la página 'Nosotros'. */
+.about-wrapper {
+    /* Espaciado interno (4rem arriba/abajo, 5% a los lados). */
+    padding: 4rem 5%;
+    /* Ancho máximo de 1200px para evitar que el contenido se estire demasiado en pantallas grandes. */
+    max-width: 1200px;
+    /* Centra el contenedor horizontalmente. */
+    margin: 0 auto;
+}
+
+/* --- Cabecera (Texto Centrado) --- */
+/* Estilos para el encabezado de la sección 'Sobre VOLTEX Mobile'. */
+.about-header {
+    /* Centra todo el texto. */
+    text-align: center;
+    /* Limita el ancho del texto para mejor legibilidad. */
+    max-width: 800px;
+    /* Centra el contenedor y añade margen inferior para separarlo del grid de valores. */
+    margin: 0 auto 4rem auto; 
+}
+
+/* Estilos para el título H1. */
+.about-header h1 {
+    /* Tamaño de fuente grande. */
+    font-size: 3rem;
+    /* Grosor de fuente. */
+    font-weight: 700;
+    /* Margen inferior. */
+    margin-bottom: 1rem;
+    /* Color de texto blanco (tomado de la variable global). */
+    color: var(--text-white);
+}
+
+/* Estilos para el párrafo de la cabecera. */
+.about-header p {
+    /* Tamaño de fuente. */
+    font-size: 1.1rem;
+    /* Color gris sutil (tomado de la variable global). */
+    color: var(--text-gray);
+    /* Altura de línea para legibilidad. */
+    line-height: 1.6;
+}
+
+/* --- Grid de Valores (Tarjetas) --- */
+/* Cuadrícula para organizar las 3 tarjetas de valores fundamentales. */
+.values-grid {
+    /* Usa CSS Grid. */
+    display: grid;
+    /* Columnas adaptables: mínimo 300px, máximo 1fr (3 columnas en escritorio). */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Espacio entre las tarjetas. */
+    gap: 2rem;
+    /* Margen inferior para separar de la sección de historia. */
+    margin-bottom: 5rem;
+}
+
+/* --- Estilo de Tarjeta Individual --- */
+/* Estilos para cada tarjeta de valor. */
+.value-card {
+    /* Color de fondo oscuro (tomado de la variable global). */
+    background-color: var(--bg-card); 
+    /* Espaciado interno. */
+    padding: 3rem 2rem;
+    /* Bordes redondeados. */
+    border-radius: 20px; 
+    /* Borde sutil. */
+    border: 1px solid #1e293b;
+    /* Usa Flexbox para apilar el icono, título y texto. */
+    display: flex;
+    /* Dirección de apilamiento vertical. */
+    flex-direction: column;
+    /* Centra los elementos horizontalmente. */
+    align-items: center;
+    /* Centra el texto. */
+    text-align: center;
+    /* Transición suave para los efectos hover. */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta. */
+.value-card:hover {
+    /* Desplaza la tarjeta ligeramente hacia arriba. */
+    transform: translateY(-5px);
+    /* Cambia el color del borde a azul primario. */
+    border-color: var(--primary);
+}
+
+/* --- Círculos de los Iconos --- */
+/* Contenedor del icono (el círculo de color). */
+.icon-box {
+    /* Ancho y alto fijos para el círculo. */
+    width: 80px;
+    height: 80px;
+    /* Bordes redondeados al 50% para formar un círculo. */
+    border-radius: 50%;
+    /* Usa Flexbox para centrar el icono. */
+    display: flex;
+    /* Centra el icono. */
+    align-items: center;
+    justify-content: center;
+    /* Tamaño del icono. */
+    font-size: 2rem;
+    /* Margen inferior para separarlo del título. */
+    margin-bottom: 1.5rem;
+}
+
+/* Variaciones de color para los iconos (Transparencia en el fondo) */
+/* Color y fondo azul para la tarjeta de Cliente. */
+.icon-blue {
+    /* Fondo azul con baja opacidad. */
+    background-color: rgba(37, 99, 235, 0.1); 
+    /* Color del icono azul claro. */
+    color: #3b82f6;
+}
+
+/* Color y fondo morado para la tarjeta de Innovación. */
+.icon-purple {
+    /* Fondo morado con baja opacidad. */
+    background-color: rgba(168, 85, 247, 0.1); 
+    /* Color del icono morado. */
+    color: #a855f7;
+}
+
+/* Color y fondo verde para la tarjeta de Calidad. */
+.icon-green {
+    /* Fondo verde con baja opacidad. */
+    background-color: rgba(34, 197, 94, 0.1); 
+    /* Color del icono verde. */
+    color: #22c55e;
+}
+
+/* --- Tipografía de las Cards --- */
+/* Título H3 dentro de las tarjetas de valor. */
+.value-card h3 {
+    /* Tamaño de fuente. */
+    font-size: 1.25rem;
+    /* Grosor de fuente. */
+    font-weight: 600;
+    /* Margen inferior. */
+    margin-bottom: 1rem;
+    /* Color de texto blanco. */
+    color: var(--text-white);
+}
+
+/* Párrafo de descripción dentro de las tarjetas. */
+.value-card p {
+    /* Color gris sutil. */
+    color: var(--text-gray);
+    /* Tamaño de fuente. */
+    font-size: 0.95rem;
+    /* Altura de línea. */
+    line-height: 1.6;
+}
+
+/* --- Sección de Historia (Ajustes Responsive) --- */
+/* Contenedor de la sección de historia (imagen y texto). */
+.history-section {
+    /* Usa Flexbox para el layout de dos columnas en escritorio. */
+    display: flex;
+    /* Espacio entre la imagen y el texto. */
+    gap: 4rem;
+    /* Centra los elementos verticalmente. */
+    align-items: center;
+    /* Padding inferior y 5% lateral. */
+    padding: 0 5% 4rem;
+    /* Limita el ancho del contenedor. */
+    max-width: 1200px;
+    /* Centra el contenedor horizontalmente. */
+    margin: 0 auto;
+}
+
+/* --- Media Queries (Responsive) --- */
+/* Media query para pantallas de tablet y móviles (768px y menos). */
+@media (max-width: 768px) {
+    /* Reduce el tamaño del título principal en móvil. */
+    .about-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    /* En la sección de historia: */
+    .history-section {
+        /* Cambia Flexbox a dirección de columna (apilamiento vertical). */
+        flex-direction: column;
+        /* Centra el texto en móvil. */
+        text-align: center;
+    }
+
+    /* En las tarjetas de valor: */
+    .value-card {
+        /* Reduce el padding interno para hacerlas más compactas en móvil. */
+        padding: 2rem; 
+    }
+
+    .values-grid {
+        /* Reduce el espacio entre las tarjetas en móvil. */
+        gap: 1.5rem;
+        /* Ajusta las columnas para que sean más pequeñas en móvil. */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
